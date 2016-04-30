@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<p>Wilco Fiers, Deque Systems</p>
+<p>Developer on axe-core, a Web accessibility evaluation tools</p>
+<p>Worked on QuailJS in the past</p>
+
+</section>
+<section>
+<p>Developed a test tool for EU, called the User Test Tool (UTT)</p>
+<p>Joined Deque because I liked axe so much</p>
+<p>Founder and chair of Auto-WCAG</p>
+<p>A group focused on improving accessibility evaluation tools</p>
+
+</section>
+<section>
+<h2 id="automated-accessibility-testing">automated accessibility testing</h2>
+<ul>
+<li><p>Development strategies</p>
+</li>
+<li><p>Accessibility strategies</p>
+</li>
+<li><p>Automated testing</p>
+</li>
+<li><p>Common accessibility checkers</p>
+</li>
+<li><p>DIY, build axe into</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="development-strategies">Development strategies</h1>
+
+</section>
+<section>
+<h2 id="project-management-history">Project management history</h2>
+
+</section>
+<section>
+<h3 id="in-the-olden-times">In the olden times</h3>
+<p>Originally managed by a single person</p>
+<ul>
+<li><p>master builder</p>
+</li>
+<li><p>creative architect</p>
+</li>
+<li><p>etc</p>
+</li>
+</ul>
+
+</section>
+<section>
+
+</section>
+<section>
+<h2 id="projects-mid-20th-century">Projects mid 20th century</h2>
+<p>First management tools developed in the 50&#39;s and 60&#39;s</p>
+<p>Goal: grip on projects to manage risks</p>
+<p>Have a predictable outcome</p>
+
+</section>
+<section>
+<h3 id="pioneer">Pioneer</h3>
+<p>Henry Gantt</p>
+<p><img src="img/gantt.jpg" alt="Henry Gantt"> <img src="img/gnatt-diagram.jpg" alt="Gantt Diagram"></p>
+
+</section>
+<section>
+<h3 id="innovations">Innovations</h3>
+<ul>
+<li><p>Phased approach</p>
+</li>
+<li><p>Milestones</p>
+</li>
+<li><p>Being in control</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="waterfall-model">Waterfall model</h2>
+<p>Based on project management model</p>
+<p>Came about in the 70&#39;s and 80&#39;s</p>
+
+</section>
+<section>
+<p>Organized into clear phases</p>
+<ul>
+<li><p>Requirements</p>
+</li>
+<li><p>Design</p>
+</li>
+<li><p>Implementation</p>
+</li>
+<li><p>Testing</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>By specialized teams</p>
+<p>Sequential of development</p>
+<p>Long development cycles</p>
+
+</section>
+<section>
+<p>Turns out software projects are hard</p>
+<p>Definition and documentation up front</p>
+<p>However:</p>
+<ul>
+<li><p>Requirements change</p>
+</li>
+<li><p>Users don&#39;t know what they want</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>This made requirement changes costly</p>
+<p>Going back was often impossible, as the team that could do the change was already on to the next project.</p>
+<p>Silo thinking, a focus on meeting ones own goals over end product quality</p>
+<p>Most software projects are very much unique</p>
+
+</section>
+<section>
+<p>Douglas Crockford &quot;Programing is not manufacturing, it&#39;s discovery&quot;</p>
+
+</section>
+<section>
+<h2 id="agile-development">Agile Development</h2>
+
+</section>
+<section>
+<p>Came around the 2000&#39;s</p>
+<p>Manifesto for Agile Software Development, 2001</p>
+
+</section>
+<section>
+<p>Less up front planning, less documentation</p>
+<p>Multi-disciplinary teams</p>
+<p>Close involvement of customers</p>
+<p>Scrum, popular implementation of Agile</p>
+
+</section>
+<section>
+<p>Adaptive process</p>
+<p>Discover what you are supposed to make, as you are making it</p>
+<p>Focused on short iterations</p>
+<p>Focus on frequent releases</p>
+
+</section>
+<section>
+<p>Daily scrum / stand up</p>
+<p>Product backlog</p>
+<p>Sprints</p>
+<p>Requires close interaction</p>
+
+</section>
+<section>
+<h2 id="quality-management">Quality management</h2>
+<p>TODO</p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="accessibility-strategies">Accessibility Strategies</h1>
+
+</section>
+<section>
+<h2 id="waterfall-accessibility">Waterfall Accessibility</h2>
+<p>Accessibility requirements up front</p>
+<p>Accessibility testing during the test phase</p>
+<p>Accessibility experts focus on audits</p>
+
+</section>
+<section>
+<p>Strong reliance on designers and developers to get accessibility right</p>
+<p>Problematic as issues are caught very late</p>
+<p>Test at each milestone</p>
+<p>Testing done by dedicated test team</p>
+<p>Benefits</p>
+<ul>
+<li><p>Clear requirements up front</p>
+</li>
+<li><p>Long term test plan</p>
+</li>
+<li><p>Dedicated test experts</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="agile-accessibility">Agile Accessibility</h2>
+<p>No more strict requirements up front</p>
+<p>No long term test plans</p>
+<p>Quality managed by automated testing</p>
+
+</section>
+<section>
+<p>Iterative development leads to:</p>
+<ul>
+<li><p>More frequent testing</p>
+</li>
+<li><p>Which requires test automation over manual testing</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>In waterfal: Testing for a month, to release once a year</p>
+<p>Agile: Release every month, test every sprint</p>
+
+</section>
+<section>
+<p>Testing done by the development team.</p>
+<p>Strong emphases on automated testing.</p>
+<p>QA teams start to disappear</p>
+<p>And each team becomes responsible for the accessibility of their product</p>
+
+</section>
+<section>
+<p>But where do they get their expertise?</p>
+<p>An accessibility expert in every team?</p>
+<p>Far too expensive</p>
+
+</section>
+<section>
+<p>Instead, we got dedicated accessibility teams</p>
+<p>To oversee the accessibility of releases of many other teams.</p>
+<p>And to make teams <strong>mostly</strong> self sufficient in managing accessibility</p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="automated-testing">Automated testing</h1>
+<p>Well know fact: &quot;Bugs caught early, cost less to resolve.&quot;</p>
+<p>Same is true for accessibility.</p>
+<p>Accessibility costs up front 5% of project budget</p>
+<p>Accessibility remediation can cost upward of 50%</p>
+
+</section>
+<section>
+<p>Different types of tests that can be automated</p>
+<ul>
+<li><p>Unit tests</p>
+</li>
+<li><p>Integration tests</p>
+</li>
+<li><p>End to end testing</p>
+</li>
+<li><p>Performance testing</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>So we&#39;ve seen, emphases has moved away from manual testing</p>
+<p>towards automated testing. But what do these tests look like?</p>
+
+</section>
+<section>
+<h2 id="unit-test">unit test</h2>
+<pre><code class="lang-javascript:">
+// Test the addNumbers function
+
+it(&#39;should adds 3 numbers together&#39;, function () {
+
+    var result = addNumbers(1, 2, 3);
+
+    expect(result).toBe(6);
+
+});
+</code></pre>
+<p>Tests small &#39;units&#39; of code, like a function that adds together numbers</p>
+
+</section>
+<section>
+<h2 id="integration-test">Integration test</h2>
+<pre><code class="lang-javascript:">
+// Expect a callback in receiveMessage to get data from sendMessage
+
+it(&#39;receives messages send from an iframe&#39;, function (done) {
+
+    receiveMessage(function (msg) {
+
+        expect(msg).toBe(&#39;foo&#39;);
+
+        done();
+
+    })
+
+    $(&#39;#iframe&#39;).contextWindow.sendMessage(&#39;foo&#39;);
+
+})
+</code></pre>
+<p>Tests how that components work together as expected, for example that a message send by one component, is received by the other.</p>
+
+</section>
+<section>
+<h2 id="functional-testing">Functional Testing</h2>
+<p>Also known as end to end testing</p>
+<pre><code class="lang-javacript:">
+// Test we get back the right page
+
+it(&#39;returns the homepage from /home&#39;, function () {
+
+    browser.url(&#39;http://localhost/home&#39;);
+
+    expect(browser.getTitle()).toContain(&#39;Homepage&#39;);
+
+});
+</code></pre>
+<p>Test that required functionality is available, such as that the right page is loaded</p>
+
+</section>
+<section>
+<h2 id="automating-accessibility">Automating accessibility</h2>
+<p>One way of automating accessibility test is this:</p>
+<pre><code class="lang-javascript:">
+it(&#39;sets the alt of the logo&#39;, function () {
+
+  var alt = $(&#39;img.header-logo&#39;).attr(&#39;alt&#39;);
+
+  expect(alt).toBe(&#39;Deque&#39;);
+
+});
+</code></pre>
+
+</section>
+<section>
+<p>Many things can be tested in this simple fashion</p>
+<ul>
+<li><p>Are the right elements marked as headings</p>
+</li>
+<li><p>is the lang attribute what you expect</p>
+</li>
+<li><p>Titles are what you expect</p>
+</li>
+<li><p>etc.</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>Question is how valuable such unit tests are</p>
+<ul>
+<li><p>They are brittle, small changes can break this test, even though it may not be a problem</p>
+</li>
+<li><p>This doesn&#39;t test unexpected behavior in code, it only tests changes in input</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>These tests are more likely to fail because of inconsequential changes to the HTML, then they are to actually catch accessibility errors.</p>
+<p>We need to test at a higher level.</p>
+
+</section>
+<section>
+<p>Accessibility Feature test:</p>
+<pre><code class="lang-javascript:">
+it(&#39;has an alt on each image&#39;, function () {
+
+    browser.url(&#39;http://localhost/home&#39;);
+
+    var images = browser.get(&#39;img&#39;);
+
+    images.forEach(function (img) {
+
+        expect(img.hasAttribute(&#39;alt&#39;)).toBe(true);
+
+    });
+
+})
+</code></pre>
+<p>Although, this is true for all web pages, isn&#39;t it?</p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="web-accessibility-evaluation-tools-waets-">Web Accessibility Evaluation Tools (WAETs)</h1>
+
+</section>
+<section>
+<p>There are many tools for accessibility testing</p>
+<p><a href="https://www.w3.org/WAI/ER/tools/">https://www.w3.org/WAI/ER/tools/</a></p>
+<p>Over the past year, this list has doubled!!</p>
+<p>There is no shortage of tools</p>
+<p>Everyone is trying to invent this wheel</p>
+<p>So clearly, no wheel already out there, is quite round enough</p>
+
+</section>
+<section>
+<h2 id="let-s-look-at-some-tools">Let&#39;s look at some tools</h2>
+
+</section>
+<section>
+<h3 id="html_codesniffer">HTML_CodeSniffer</h3>
+<p>Bookmarklet by Squizlabs</p>
+<p><a href="http://squizlabs.github.io/HTML_CodeSniffer/">http://squizlabs.github.io/HTML_CodeSniffer/</a></p>
+<p>Highlights errors, warnings and notices</p>
+
+</section>
+<section>
+<h3 id="wave-by-webaim">WAVE by WebAIM</h3>
+<p><a href="http://wave.webaim.org/">http://wave.webaim.org/</a></p>
+<p>Creates an overlay of another website</p>
+<p>Provides errors, warnings</p>
+<p>As well as structural information for manual testing</p>
+<p>Runs as an online service, or a Chrome plugin</p>
+
+</section>
+<section>
+<h3 id="worldspace-assure">WorldSpace Assure</h3>
+<p>????</p>
+
+</section>
+<section>
+<h3 id="accessibility-checker-cksource">Accessibility Checker CKSource</h3>
+<p><a href="https://cksource.com/ckeditor/services#accessibility-checker">https://cksource.com/ckeditor/services#accessibility-checker</a></p>
+<p>Plugin to CK Editor</p>
+<p>Based on QuailJS</p>
+<p>Helps fix issues</p>
+
+</section>
+<section>
+<h3 id="wcag-em-report-tool">WCAG-EM Report Tool</h3>
+<p><a href="https://www.w3.org/WAI/eval/report-tool/">https://www.w3.org/WAI/eval/report-tool/</a></p>
+<p>Step by step</p>
+<p>No automated tests at all</p>
+<p>Exports in EARL</p>
+
+</section>
+<section>
+<h3 id="pdf-accessibility-checker-pac-">PDF Accessibility Checker (PAC)</h3>
+<p><a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html</a></p>
+<p>Returns passes, warnings and fails</p>
+
+</section>
+<section>
+<h3 id="fireeyes">FireEyes</h3>
+<p>?????</p>
+
+</section>
+<section>
+<h2 id="differences-in-tools">Differences in tools</h2>
+<p>Run in different environments</p>
+<p>Test different standards</p>
+<p>Work on different technologies</p>
+<p>Output different ways</p>
+<p>Different levels of accuracy</p>
+
+</section>
+<section>
+<h2 id="using-tools-in-automated-testing">Using tools in automated testing</h2>
+<p>What we need</p>
+<ul>
+<li><p>Does not require human operator</p>
+</li>
+<li><p>Tests all relevant technologies</p>
+<p>  (HTML, CSS, JavaScript, ARIA)</p>
+</li>
+<li><p>Accuracy: Don&#39;t throw errors where there are none</p>
+</li>
+<li><p>Security: Keep my code private</p>
+</li>
+<li><p>Documentation and transparency</p>
+</li>
+</ul>
+<p>What you&#39;ll end up using is the Rules engine.</p>
+<p>A Rule Engine runs a series of rules on a web page.</p>
+<p>Each Engine has their own ruleset</p>
+
+</section>
+<section>
+<h2 id="there-are-several-rule-engines-like-this">There are several Rule engines like this</h2>
+<ul>
+<li><p>Open Source:</p>
+<ul>
+<li><p>aXe-Core</p>
+</li>
+<li><p>QuailJS</p>
+</li>
+<li><p>AccessLint</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Proprietary</p>
+<ul>
+<li><p>Tennon</p>
+</li>
+<li><p>WAVE</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="implementing-a-rule-engine">Implementing a Rule Engine</h1>
+
+</section>
+<section>
+<h2 id="angular-material">Angular Material</h2>
+<p>UI Framework developed by Google</p>
+<p>Based on the popular Angular framework</p>
+<p>Consists of many components</p>
+<p>Angular, not known for it&#39;s accessibility</p>
+<p><a href="https://material.angularjs.org/latest/">https://material.angularjs.org/latest/</a></p>
+
+</section>
+<section>
+<h2 id="installing-the-project">Installing the project</h2>
+<p>Requires: GIT, NodeJS</p>
+<p>Open the command line, then write the following commands:</p>
+<pre><code>
+git clone https://github.com/wilcofiers/materials.git
+
+cd materials
+
+npm install
+
+npm test
+</code></pre>
+</section>
+<section>
+<h2 id="your-first-test">Your first test</h2>
+<p>Go to the folder <code>materials/test/accessibility</code></p>
+<p>Open the file <code>button.a11y.js</code></p>
+
+</section>
+<section>
+<p>Line by line: Tell the test framework (Karma)</p>
+<p>that we are writing group of tests we call &#39;md-button accessibility&#39;</p>
+<pre><code class="lang-javascript">
+describe(&#39;md-button accessibility&#39;, function () {
+</code></pre>
+
+</section>
+<section>
+<p>Tell angular to load the button module, from the material components</p>
+<pre><code class="lang-javascript:">
+beforeEach(module(&#39;material.components.button&#39;));
+</code></pre>
+
+</section>
+<section>
+<p>Create an element we can put the angular component in,</p>
+<p>and create a function that can compile the component and add it to the page</p>
+<pre><code class="lang-javascript">
+var fixture, compileToFixture;
+
+beforeEach(inject(function ($compile, $rootScope) {
+
+  // from __helper-functions.js
+
+  fixture = getFixture();
+
+  compileToFixture = createFixtureAppend($compile, $rootScope);
+
+});
+</code></pre>
+
+</section>
+<section>
+<p>Define a new test and document what we are testing</p>
+<pre><code class="lang-javascript">
+it(&#39;has 0 violations in axe&#39;, function (done) {
+
+    // ... test code ...
+
+});
+</code></pre>
+
+</section>
+<section>
+<p>Add the md-button component to the fixture</p>
+<p>and test it using axe</p>
+<pre><code class="lang-javscript">
+compileToFixture(&#39;&lt;md-button&gt;Button Name&lt;/md-button&gt;&#39;);
+
+axe.a11yCheck(fixture, function (results) {
+
+  expect(results.violations.length).toBe(0);
+
+  done();
+
+});
+</code></pre>
+
+</section>
+<section>
+<h2 id="running-this-test">Running this test</h2>
+<p>You&#39;ll find accessibility tests under <code>materials/test/accessibility</code></p>
+<p>To run the tests, type the following in the command line</p>
+<pre><code>
+npm run a11y-test
+</code></pre><p>Try removing &#39;Button Name&#39;. You will see an error</p>
+
+</section>
+<section>
+<h2 id="try-it-yourself">Try it yourself</h2>
+<p>Check out</p>
+<ul>
+<li><p><code>readme.md</code>: More detailed instructions</p>
+</li>
+<li><p><code>checkbox.a11y.js</code>: A slightly more advanced example</p>
+</li>
+<li><p><a href="http://material.angularjs.org/">material.angularjs.org/</a>: Angular Material documentation</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p>Suggested tests to try</p>
+<ul>
+<li><p>test md-button when disabled (easy)</p>
+</li>
+<li><p>complexity: low.</p>
+<p>input, radioButton, select, slider, switch</p>
+</li>
+<li><p>complexity: average.</p>
+<p>chips, menu, tabs,</p>
+</li>
+<li><p>complexity: high.</p>
+<p>menubar, autocomplete, dialog</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="unit-testing-beyond-general-purpose-a11y-checkers">Unit testing beyond general purpose A11y checkers</h1>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="standardization-in-auto-wcag">Standardization in Auto-WCAG</h1>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>
