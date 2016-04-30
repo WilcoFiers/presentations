@@ -1,6 +1,9 @@
 # Automated testing
 
+---
 Well know fact: "Bugs caught early, cost less to resolve."
+
+---
 Same is true for accessibility.
 Accessibility costs up front 5% of project budget
 Accessibility remediation can cost upward of 50%
@@ -13,40 +16,40 @@ Different types of tests that can be automated
 - Performance testing
 
 ---
-So we've seen, emphases has moved away from manual testing
-towards automated testing. But what do these tests look like?
+So we've seen, emphases has moved away from manual testing towards automated testing. But what do these tests look like?
 
 ## unit test
-```javascript:
+```javascript
 // Test the addNumbers function
 it('should adds 3 numbers together', function () {
-	var result = addNumbers(1, 2, 3);
-	expect(result).toBe(6);
+  var result = addNumbers(1, 2, 3);
+  expect(result).toBe(6);
 });
 ```
 Tests small 'units' of code, like a function that adds together numbers
 
 
 ## Integration test
-```javascript:
+```javascript
 // Expect a callback in receiveMessage to get data from sendMessage
 it('receives messages send from an iframe', function (done) {
-	receiveMessage(function (msg) {
-		expect(msg).toBe('foo');
-		done();
-	})
-	$('#iframe').contextWindow.sendMessage('foo');
-})
+  receiveMessage(function (msg) {
+    expect(msg).toBe('foo');
+    done();
+  })
+  $('#iframe').contextWindow.sendMessage('foo');
+});
 ```
 Tests how that components work together as expected, for example that a message send by one component, is received by the other.
 
 
 ## Functional Testing
 Also known as end to end testing
-```javacript:
+
+```javascript
 // Test we get back the right page
 it('returns the homepage from /home', function () {
-	browser.url('http://localhost/home');
+  browser.url('http://localhost/home');
     expect(browser.getTitle()).toContain('Homepage');
 });
 ```
@@ -54,9 +57,9 @@ Test that required functionality is available, such as that the right page is lo
 
 
 ## Automating accessibility
-
 One way of automating accessibility test is this:
-```javascript:
+
+```javascript
 it('sets the alt of the logo', function () {
   var alt = $('img.header-logo').attr('alt');
   expect(alt).toBe('Deque');
@@ -81,15 +84,14 @@ We need to test at a higher level.
 
 ---
 Accessibility Feature test:
-```javascript:
+
+```javascript
 it('has an alt on each image', function () {
-	browser.url('http://localhost/home');
-	var images = browser.get('img');
-	images.forEach(function (img) {
-		expect(img.hasAttribute('alt')).toBe(true);
-	});
+  browser.url('http://localhost/home');
+  var images = browser.get('img');
+  images.forEach(function (img) {
+    expect(img.hasAttribute('alt')).toBe(true);
+  });
 })
 ```
-
 Although, this is true for all web pages, isn't it?
-

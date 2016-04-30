@@ -8,12 +8,12 @@ const targetDir = './build';
 const htmlTemplate = path.join(targetDir, 'index.html');
 const htmlFile = path.join(targetDir, 'presentation.html');
 
-var outline = fs.readdirSync(sourcDir);
-var sheets = outline.map((file) => {
-	var markdown = fs.readFileSync(path.join(sourcDir, file), 'utf8');
+let outline = fs.readdirSync(sourcDir);
+let sheets = outline.map((file) => {
+	let markdown = fs.readFileSync(path.join(sourcDir, file), 'utf8');
 	markdown = markdown.replace(/\n/g, '\n\n');
 
-	var html = '';
+	let html = '';
 
 	markdown // split after h2 headings
 	.replace(/\n##/g, '<SEC>\n##').split('<SEC>')
@@ -23,17 +23,26 @@ var sheets = outline.map((file) => {
 	}, [])
 	// Put it all in section elements
 	.forEach((section) =>{
-		html += '<section>\n' + marked(section) + '\n</section>\n';
+		let data = section.match(/{({[^}]*})}/);
+		let attrs = ''
+		if (data) {
+			section = section.replace(data[0], '');
+			data = JSON.parse(data[1]);
+			attrs = Object.keys(data).reduce( (attrs, key) => {
+				return attrs + ' ' + key + '="' + data[key] + '"';
+			}, "");
+		}
+		html += '<section' + attrs + '>\n' + marked(section) + '\n</section>\n';
 	});
 
 	return html;
 });
 
-var html = '<section>\n' +
+let html = '<section>\n' +
 	sheets.join('</section>\n<section>\n') +
 	'\n</section>';
 
-var template = fs.readFileSync(htmlTemplate, 'utf8');
+let template = fs.readFileSync(htmlTemplate, 'utf8');
 
 html = template.replace('<!-- content -->', html);
 

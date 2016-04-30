@@ -8,16 +8,16 @@ Originally managed by a single person
 - creative architect
 - etc
 
----
 ## Projects mid 20th century
 First management tools developed in the 50's and 60's
 Goal: grip on projects to manage risks
 Have a predictable outcome
 
-### Pioneer
-Henry Gantt
-![Henry Gantt](img/gantt.jpg) ![Gantt Diagram](img/gnatt-diagram.jpg)
+### Henry Gantt
+![Henry Gantt](img/gantt.jpg)
 
+---
+![Gantt Diagram](img/gnatt-diagram.jpg)
 
 ### Innovations
 - Phased approach
@@ -29,6 +29,10 @@ Henry Gantt
 
 Based on project management model
 Came about in the 70's and 80's
+{{
+	"data-background": "img/waterfall.jpg",
+	"class": "darken"
+}}
 
 ---
 Organized into clear phases
@@ -38,8 +42,8 @@ Organized into clear phases
 - Testing
 
 ---
-By specialized teams
-Sequential of development
+Specialized teams
+Sequential development
 Long development cycles
 
 ---
@@ -50,13 +54,14 @@ However:
 - Users don't know what they want
 
 ---
-This made requirement changes costly
-Going back was often impossible, as the team that could do the change was already on to the next project.
-Silo thinking, a focus on meeting ones own goals over end product quality
-Most software projects are very much unique
+- This made requirement changes costly
+- Going back was often impossible, as the team that could do the change was already on to the next project.
+- Silo thinking, a focus on meeting ones own goals over end product quality
+- Most software projects are very much unique
 
 ---
-Douglas Crockford "Programing is not manufacturing, it's discovery"
+Douglas Crockford
+"Programing is not manufacturing, it's discovery"
 
 
 ## Agile Development
@@ -65,10 +70,10 @@ Came around the 2000's
 Manifesto for Agile Software Development, 2001
 
 ---
-Less up front planning, less documentation
-Multi-disciplinary teams
-Close involvement of customers
-Scrum, popular implementation of Agile
+- Less up front planning, less documentation
+- Multi-disciplinary teams
+- Close involvement of customers
+- Scrum, popular implementation of Agile
 
 ---
 Adaptive process
@@ -84,4 +89,9 @@ Requires close interaction
 
 ## Quality management
 
-TODO
+| Waterfall             | Agile
+|-----------------------|-------------------
+| Dedicated teams       | Self tested
+| Long test phases      | Frequent testing
+| Requirements up front | Specify as you go
+

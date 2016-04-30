@@ -24,32 +24,36 @@ Go to the folder `materials/test/accessibility`
 Open the file `button.a11y.js`
 
 ---
-Line by line: Tell the test framework (Karma)
-that we are writing group of tests we call 'md-button accessibility'
+Define a group of tests
+
 ```javascript
 describe('md-button accessibility', function () {
+  //...
+});
 ```
 
 ---
-Tell angular to load the button module, from the material components
-```javascript:
+Identify the module to Angular
+
+```javascript
 beforeEach(module('material.components.button'));
 ```
 
 ---
-Create an element we can put the angular component in,
-and create a function that can compile the component and add it to the page
+Set up a DOM element to test on
+
 ```javascript
 var fixture, compileToFixture;
 beforeEach(inject(function ($compile, $rootScope) {
   // from __helper-functions.js
   fixture = getFixture();
   compileToFixture = createFixtureAppend($compile, $rootScope);
-});
+}));
 ```
 
 ---
-Define a new test and document what we are testing
+Define a test
+
 ```javascript
 it('has 0 violations in axe', function (done) {
 	// ... test code ...
@@ -57,9 +61,9 @@ it('has 0 violations in axe', function (done) {
 ```
 
 ---
-Add the md-button component to the fixture
-and test it using axe
-```javscript
+Create a component and test using axe
+
+```javascript
 compileToFixture('<md-button>Button Name</md-button>');
 axe.a11yCheck(fixture, function (results) {
   expect(results.violations.length).toBe(0);
@@ -68,8 +72,8 @@ axe.a11yCheck(fixture, function (results) {
 ```
 
 ## Running this test
-You'll find accessibility tests under `materials/test/accessibility`
-To run the tests, type the following in the command line
+`materials/test/accessibility`
+Run the test command:
 ```
 npm run a11y-test
 ```
@@ -83,7 +87,7 @@ Check out
 - [material.angularjs.org/](http://material.angularjs.org/): Angular Material documentation
 
 ---
-Suggested tests to try
+**Suggested tests to try**
 - test md-button when disabled (easy)
 - complexity: low.
   input, radioButton, select, slider, switch

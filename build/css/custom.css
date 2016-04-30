@@ -1,0 +1,7 @@
+section.darken {
+	background:rgba(126,236,255,0.3);
+	box-shadow:0 0 5px 10px rgba(126,236,255,0.3);
+}
+section.darken * {
+	color:black;
+}
