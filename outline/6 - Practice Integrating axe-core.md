@@ -3,79 +3,82 @@
 ## Angular Material
 UI Framework developed by Google
 Based on the popular Angular framework
-Consists of many components
-Angular, not known for it's accessibility
 https://material.angularjs.org/latest/
 
 
 ## Installing the project
-Requires: GIT, NodeJS
-Open the command line, then write the following commands:
+Requires: GIT, NodeJS, then run:
 ```
-git clone https://github.com/wilcofiers/materials.git
-cd materials
-npm install
-npm test
+    git clone https://github.com/wilcofiers/material.git
+    cd material
+    npm install
+    npm test
 ```
-
 
 ## Your first test
-Go to the folder `materials/test/accessibility`
+Go to the folder `material/test/accessibility`
 Open the file `button.a11y.js`
 
 ---
 Define a group of tests
 
 ```javascript
-describe('md-button accessibility', function () {
-  //...
-});
+    describe('md-button accessibility',
+        function () {
+      //...
+    });
 ```
 
 ---
 Identify the module to Angular
 
 ```javascript
-beforeEach(module('material.components.button'));
+    beforeEach(module(
+        'material.components.button'));
 ```
 
 ---
 Set up a DOM element to test on
 
 ```javascript
-var fixture, compileToFixture;
-beforeEach(inject(function ($compile, $rootScope) {
-  // from __helper-functions.js
-  fixture = getFixture();
-  compileToFixture = createFixtureAppend($compile, $rootScope);
-}));
+    var fixture, compileToFixture;
+    beforeEach(inject(function
+        ($compile, $rootScope) {
+      // from __helper-functions.js
+      fixture = getFixture();
+      compileToFixture = createFixtureAppend(
+          $compile, $rootScope);
+    }));
 ```
 
 ---
 Define a test
 
 ```javascript
-it('has 0 violations in axe', function (done) {
-	// ... test code ...
-});
+    it('has 0 violations in axe',
+        function (done) {
+    	// ... test code ...
+    });
 ```
 
 ---
 Create a component and test using axe
 
 ```javascript
-compileToFixture('<md-button>Button Name</md-button>');
-axe.a11yCheck(fixture, function (results) {
-  expect(results.violations.length).toBe(0);
-  done();
-});
+    compileToFixture(
+        '<md-button>Button Name</md-button>');
+    axe.a11yCheck(fixture, function (results) {
+      expect(results.violations.length).toBe(0);
+      done();
+    });
 ```
 
 ## Running this test
-`materials/test/accessibility`
+`material/test/accessibility`
 Run the test command:
+
 ```
-npm run a11y-test
+    npm run a11y-test
 ```
 Try removing 'Button Name'. You will see an error
 

@@ -10,7 +10,8 @@ Designs rule that are:
 - Accurate
 - Implementation independent
 
-## WCAG Task Force
+## Start a new WCAG Task Force
+plans on the way to:
 - Develop a standard for rules
 - Create a way to measure accuracy
 - Build a collection

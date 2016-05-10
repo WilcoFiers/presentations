@@ -1,51 +1,26 @@
 # Accessibility Strategies
 
-## Waterfall Accessibility
+## A11y Requirements
+- **Waterfall:** Well defined up front
+- **Agile:** Decided as you go
 
-Accessibility requirements up front
-Accessibility testing during the test phase
-Accessibility experts focus on audits
+## A11y Testing
+- **Waterfall:** Dedicated test phase
+- **Agile:** Frequent, in short bursts
 
----
-Strong reliance on designers and developers to get accessibility right
-Problematic as issues are caught very late
-Test at each milestone
-Testing done by dedicated test team
+## Test responsibility
+- **Waterfall:** Quality Assurance team
+- **Agile:** Scrum team
 
----
-Benefits
-- Clear requirements up front
-- Long term test plan
-- Dedicated test experts
+## Waterfall to Agile {{ "fragmented": true }}
+- Move from manual towards automated testing
+- QA teams disappear
+- Creation of dedicated accessibility teams
 
-## Agile Accessibility
-
-No more strict requirements up front
-No long term test plans
-Quality managed by automated testing
+## Accessibility teams {{ "fragmented": true }}
+- Focus on training over audits
+- Strategy over implementation
+- Teach scrum teams a11y independence
 
 ---
-Iterative development leads to:
-- More frequent testing
-- Automation over manual testing
-
----
-**In waterfal**: Testing for a month, to release once a year
-**Agile**: Release every month, test every sprint
-
----
-Testing done by the development team.
-Strong emphases on automated testing.
-QA teams start to disappear
-And each team becomes responsible for the accessibility of their product
-
----
-Where to get that expertise?
-Accessibility expert in every team?
-
-## Accessibility teams
-To oversee the accessibility of releases of many other teams.
-And to make teams **mostly** self sufficient in managing accessibility
-
----
-Hod do they do it? **Automation**
+How?

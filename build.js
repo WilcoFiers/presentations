@@ -8,10 +8,23 @@ const targetDir = './build';
 const htmlTemplate = path.join(targetDir, 'index.html');
 const htmlFile = path.join(targetDir, 'presentation.html');
 
+marked.setOptions({
+	renderer: new marked.Renderer(),
+	gfm: true,
+	tables: true,
+	breaks: false,
+	pedantic: false,
+	sanitize: true,
+	smartLists: true,
+	smartypants: false
+})
+
 let outline = fs.readdirSync(sourcDir);
 let sheets = outline.map((file) => {
 	let markdown = fs.readFileSync(path.join(sourcDir, file), 'utf8');
 	markdown = markdown.replace(/\n/g, '\n\n');
+	markdown = markdown.replace(/\n\n\|/g, '\n|');
+	markdown = markdown.replace(/\n\n\ {4}/g, '\n');
 
 	let html = '';
 
@@ -22,17 +35,27 @@ let sheets = outline.map((file) => {
 		return sections.concat(section.split('\n---'));
 	}, [])
 	// Put it all in section elements
-	.forEach((section) =>{
+	.forEach((section) => {
+		let fragmented = false;
 		let data = section.match(/{({[^}]*})}/);
 		let attrs = ''
 		if (data) {
 			section = section.replace(data[0], '');
 			data = JSON.parse(data[1]);
+			fragmented = data.fragmented || false;
+			delete data.fragmented;
+
 			attrs = Object.keys(data).reduce( (attrs, key) => {
 				return attrs + ' ' + key + '="' + data[key] + '"';
 			}, "");
 		}
-		html += '<section' + attrs + '>\n' + marked(section) + '\n</section>\n';
+
+		let content = marked(section);
+		if (fragmented) {
+			content = content.replace(/<li>/g, '<li class="fragment">');
+		}
+
+		html += '<section' + attrs + '>\n' + content + '\n</section>\n';
 	});
 
 	return html;

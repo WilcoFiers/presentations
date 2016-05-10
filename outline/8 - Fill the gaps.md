@@ -5,9 +5,9 @@ Beyond standard tools
 - Tools are limited
 - You know your site better
 
-## Functional a11y tests
+## Functional a11y tests {{ "fragmented": true }}
 Things you should test
-- Are roles in the right elements
+- Are roles on the right elements
 - Does focus move to the right place
 - Correct state changes
 - Are relations maintained
@@ -20,41 +20,39 @@ Because bugs in ARIA are:
 
 ### Focus moves
 ```javascript
-ìt('opens a dialog', function () {
-  myButton.activate();
-  expect(myDialog.state).toBe('open');
-  expect(myDialog.elm.getAttribute('role'))
-    .toBe('dialog');
-  // Check that the correct element received focus
-  expect(document.activeElement)
-    .toBe(myDialog.elm);
-});
+    ìt('opens a dialog', function () {
+      myButton.activate();
+      expect(myDialog.state).toBe('open');
+      expect(myDialog.elm.getAttribute('role'))
+        .toBe('dialog');
+      // Check focus moved
+      expect(document.activeElement)
+        .toBe(myDialog.elm);
+    });
 ```
 
 ## State is updated
 ```javascript
-it('selects the tab', function () {
-  myTab.activate();
-  expect(myTabPanel.getActive().name)
-    .toBe('myTabPanel');
-  // Test the aria-state has changed
-  expect(myTab.elm.getAttribute('aria-selected'))
-    .toBe('true');
-});
+    it('selects the tab', function () {
+      myTab.activate();
+      expect(myTabPanel.getActive().name)
+        .toBe('myTabPanel');
+      // Test the aria-state has changed
+      var selected = myTab.elm.attr('aria-selected')
+      expect(selected).toBe('true');
+    });
 ```
 
 ## Test relationships
 ```javascript
-it('contains tabs', function () {
-  var tabs = myTabPanel.getTabs();
-  expect(myTabPanel.length).toBe(3);
-  // test the roles of tab and tabpanel
-  expect(myTabPanel.elm.getAttribute('role'))
-    .toBe('tabpanel');
-  expect(tabs[0].elm.getAttribute('role'))
-    .toBe('tab');
-  // test the parent / child relationship
-  expect(myTabPanel.elm.children[0])
-    .toBe(tabs[0].elm);
-});
+    it('contains tabs', function () {
+      // test the roles of tab and tabpanel
+      expect(myTabPanel.elm.attr('role'))
+        .toBe('tabpanel');
+      expect(tabs[0].elm.attr('role'))
+        .toBe('tab');
+      // test the parent / child relationship
+      expect(myTabPanel.elm.children[0])
+        .toBe(tabs[0].elm);
+    });
 ```

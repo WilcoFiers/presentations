@@ -5,3 +5,23 @@ section.darken {
 section.darken * {
 	color:black;
 }
+section.grayed {
+	background:rgba(180,180,180,0.3);
+	box-shadow:0 0 5px 10px rgba(180,180,180,0.3);
+}
+section.grayed * {
+	color:black;
+}
+
+.reveal pre code {
+	font-size:150%;
+	line-height:1.5em;
+	padding: .25em .5em;
+}
+.reveal img[alt=love] {
+	margin:0 -0.1em -0.3em;
+	background:none;
+	border:0;
+	box-shadow:none;
+    display: inline-block;
+}
