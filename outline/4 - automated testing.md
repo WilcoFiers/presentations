@@ -21,9 +21,8 @@ Test individual bits of code
 
 ```javascript
     // Test the addNumbers function
-    it('should adds 3 numbers together',
-        function () {
-      var result = addNumbers(1, 2, 3);
+    it('should adds 3 numbers together', () => {
+      let result = addNumbers(1, 2, 3);
       expect(result).toBe(6);
     });
 ```
@@ -33,11 +32,9 @@ Test how components work together:
 
 ```javascript
     // Message an iframe
-    it('receives messages send from an iframe',
-        function () {
-      receiveMessage(function (msg) {
-        expect(msg).toBe('foo');
-      });
+    it('receives messages send from an iframe', () => {
+      receiveMessage((msg) => 
+        expect(msg).toBe('foo'));
       $('#iframe').contextWindow
         .sendMessage('foo');
     });
@@ -48,8 +45,7 @@ Test high level functionality
 
 ```javascript
     // Test we get back the right page
-    it('returns the homepage from /home',
-        function () {
+    it('returns the homepage from /home', () => {
       browser.url('http://localhost/home');
         expect(browser.getTitle())
         .toContain('Homepage');
@@ -60,9 +56,8 @@ Test high level functionality
 One way of automating accessibility test is this:
 
 ```javascript
-    it('sets the alt of the logo',
-        function () {
-      var alt = $('img.header-logo')  .attr('alt');
+    it('sets the alt of the logo', () => {
+      let alt = $('img.header-logo').attr('alt');
       expect(alt).toBe('Deque');
     });
 ```
@@ -86,11 +81,11 @@ We need to test at a higher level.
 Accessibility Feature test:
 
 ```javascript
-    it('has an alt on each image', function () {
+    it('has an alt on each image', () => {
       browser.url('http://localhost/home');
-      var images = browser.get('img');
-      images.forEach(function (img) {
-        var alt = img.hasAttribute('alt');
+      let images = browser.get('img');
+      images.forEach((img) => {
+        let alt = img.hasAttribute('alt');
         expect(alt).toBe(true);
       });
     })

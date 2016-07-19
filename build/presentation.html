@@ -451,6 +451,10 @@
 <p><strong>How?</strong></p>
 
 </section>
+<section>
+<h2 id="time-for-coffee">Time for coffee</h2>
+
+</section>
 </section>
 <section>
 <section>
@@ -486,9 +490,8 @@
 <h2 id="unit-test">unit test</h2>
 <p>Test individual bits of code</p>
 <pre><code class="lang-javascript">// Test the addNumbers function
-it(&#39;should adds 3 numbers together&#39;,
-    function () {
-  var result = addNumbers(1, 2, 3);
+it(&#39;should adds 3 numbers together&#39;, () =&gt; {
+  let result = addNumbers(1, 2, 3);
   expect(result).toBe(6);
 });
 </code></pre>
@@ -498,11 +501,9 @@ it(&#39;should adds 3 numbers together&#39;,
 <h2 id="integration-test">Integration test</h2>
 <p>Test how components work together:</p>
 <pre><code class="lang-javascript">// Message an iframe
-it(&#39;receives messages send from an iframe&#39;,
-    function () {
-  receiveMessage(function (msg) {
-    expect(msg).toBe(&#39;foo&#39;);
-  })
+it(&#39;receives messages send from an iframe&#39;, () =&gt; {
+  receiveMessage((msg) =&gt; 
+    expect(msg).toBe(&#39;foo&#39;));
   $(&#39;#iframe&#39;).contextWindow
     .sendMessage(&#39;foo&#39;);
 });
@@ -513,8 +514,7 @@ it(&#39;receives messages send from an iframe&#39;,
 <h2 id="functional-testing">Functional Testing</h2>
 <p>Test high level functionality</p>
 <pre><code class="lang-javascript">// Test we get back the right page
-it(&#39;returns the homepage from /home&#39;,
-    function () {
+it(&#39;returns the homepage from /home&#39;, () =&gt; {
   browser.url(&#39;http://localhost/home&#39;);
     expect(browser.getTitle())
     .toContain(&#39;Homepage&#39;);
@@ -525,9 +525,8 @@ it(&#39;returns the homepage from /home&#39;,
 <section>
 <h2 id="automating-accessibility">Automating accessibility</h2>
 <p>One way of automating accessibility test is this:</p>
-<pre><code class="lang-javascript">it(&#39;sets the alt of the logo&#39;,
-    function () {
-  var alt = $(&#39;img.header-logo&#39;)  .attr(&#39;alt&#39;);
+<pre><code class="lang-javascript">it(&#39;sets the alt of the logo&#39;, () =&gt; {
+  let alt = $(&#39;img.header-logo&#39;).attr(&#39;alt&#39;);
   expect(alt).toBe(&#39;Deque&#39;);
 });
 </code></pre>
@@ -563,11 +562,11 @@ it(&#39;returns the homepage from /home&#39;,
 </section>
 <section>
 <p>Accessibility Feature test:</p>
-<pre><code class="lang-javascript">it(&#39;has an alt on each image&#39;, function () {
+<pre><code class="lang-javascript">it(&#39;has an alt on each image&#39;, () =&gt; {
   browser.url(&#39;http://localhost/home&#39;);
-  var images = browser.get(&#39;img&#39;);
-  images.forEach(function (img) {
-    var alt = img.hasAttribute(&#39;alt&#39;);
+  let images = browser.get(&#39;img&#39;);
+  images.forEach((img) =&gt; {
+    let alt = img.hasAttribute(&#39;alt&#39;);
     expect(alt).toBe(true);
   });
 })
@@ -711,7 +710,8 @@ it(&#39;returns the homepage from /home&#39;,
 <section>
 <h2 id="installing-the-project">Installing the project</h2>
 <p>Requires: GIT, NodeJS, then run:</p>
-<pre><code>git clone https://github.com/wilcofiers/material.git
+<pre><code>git clone https://github.com/↵
+    wilcofiers/material.git
 cd material
 npm install
 npm test

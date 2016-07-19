@@ -9,7 +9,8 @@ https://material.angularjs.org/latest/
 ## Installing the project
 Requires: GIT, NodeJS, then run:
 ```
-    git clone https://github.com/wilcofiers/material.git
+    git clone https://github.com/↵
+        wilcofiers/material.git
     cd material
     npm install
     npm test
