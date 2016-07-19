@@ -28,3 +28,9 @@ section.grayed * {
 	border:0;
 	box-shadow:none;
 }
+
+.reveal img[alt=Wilco] {
+    float: left;
+    margin-top: -50px;
+    margin-right: -50px;
+}

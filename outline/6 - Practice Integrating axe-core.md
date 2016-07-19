@@ -13,7 +13,8 @@ Requires: GIT, NodeJS, then run:
         wilcofiers/material.git
     cd material
     npm install
-    npm test
+    npm install -g gulp-cli
+    gulp karma-a11y
 ```
 
 ## Your first test
