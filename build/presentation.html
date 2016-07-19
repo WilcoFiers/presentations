@@ -29,8 +29,13 @@
 <section>
 <p><strong>Wilco Fiers</strong>,</p>
 <p>Deque Systems</p>
-<p>Developer on axe-core,</p>
-<p>Chair of Auto-WCAG</p>
+<p>Developer on aXe-core,</p>
+<p>Chair of Auto-WCAG community</p>
+
+</section>
+<section>
+<h2 id="slide-deck">Slide deck</h2>
+<p><a href="http://goo.gl/r6Cs00">http://goo.gl/r6Cs00</a></p>
 
 </section>
 <section>
@@ -41,12 +46,22 @@
 
 </section>
 <section>
-<h2 id="this-workshop">This Workshop</h2>
+<h2 id="this-workshop-1-2-">This Workshop (1 / 2)</h2>
 <ul>
+<li class="fragment"><p>What is accessibility</p>
+</li>
 <li class="fragment"><p>Development strategies</p>
 </li>
 <li class="fragment"><p>Accessibility strategies</p>
 </li>
+<li class="fragment"><p><em>Time for a break</em></p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="this-workshop-2-2-">This Workshop (2 / 2)</h2>
+<ul>
 <li class="fragment"><p>Automated testing</p>
 </li>
 <li class="fragment"><p>Common accessibility checkers</p>
@@ -58,6 +73,134 @@
 </ul>
 
 </section>
+<section>
+<h2 id="but-before-we-start">But, before we start</h2>
+<p>Who are you and what do you want to learn?</p>
+<p><img src="img/profile.png" alt=""></p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="accessibility">Accessibility</h1>
+
+</section>
+<section>
+<p><img src="img/sir-tim.jpg" alt="Sir Tim Berners-Lee"></p>
+<p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+<p><em>Sir Tim Berners-Lee</em>, inventor of the World Wide Web</p>
+
+</section>
+<section>
+<h2 id="it-s-about-people">It&#39;s about people</h2>
+<p>We are all different</p>
+<ul>
+<li><p>Young and old</p>
+</li>
+<li><p>At home or on the go</p>
+</li>
+<li><p>Bored or in a hurry</p>
+</li>
+<li><p>On a 10 mbit line, or a 2g data plan</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="four-principles-of-accessibility">Four principles of accessibility</h2>
+<p>Outlined in the Web Content Accessibility Guidelines</p>
+
+</section>
+<section>
+<h3 id="principle-1-perceivable">Principle 1: Perceivable</h3>
+<ul>
+<li><p>Images &amp; video</p>
+</li>
+<li><p>Audio</p>
+</li>
+<li><p>Color</p>
+</li>
+<li><p>Presentation &amp; reading order</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="principle-2-operable">Principle 2: Operable</h3>
+<ul>
+<li><p>Point devices</p>
+</li>
+<li><p>Time constraints</p>
+</li>
+<li><p>Flashing content</p>
+</li>
+<li><p>Navigation aids</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="principle-3-understandable">Principle 3: Understandable</h3>
+<ul>
+<li><p>Labels and headings</p>
+</li>
+<li><p>Consistency</p>
+</li>
+<li><p>Instructions</p>
+</li>
+<li><p>Feedback</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="principle-4-robust">Principle 4: Robust</h3>
+<ul>
+<li><p>Alternative browsers</p>
+</li>
+<li><p>Assistive technologies</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="assistive-technologies">Assistive technologies</h2>
+<p>An umbrella term that includes assistive, adaptive, and rehabilitative devices for people with disabilities and also includes the process used in selecting, locating, and using them.</p>
+
+</section>
+<section>
+<h3 id="assistive-input">Assistive input</h3>
+<ul>
+<li><p>Alternative keyboards</p>
+</li>
+<li><p>Joystick</p>
+</li>
+<li><p>Sip-and-puff</p>
+</li>
+<li><p>Speach recognition</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="assistive-output">Assistive output</h3>
+<ul>
+<li><p>Screen magnifiers</p>
+</li>
+<li><p>Screen readers</p>
+</li>
+<li><p>Alternative display modes</p>
+</li>
+<li><p>Text highlighters</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="basically">Basically</h2>
+<p>Don&#39;t make assumptions about which input method is used or how your output will be presented.</p>
+
+</section>
 </section>
 <section>
 <section>
@@ -66,19 +209,32 @@
 </section>
 <section>
 <h2 id="project-management-history">Project management history</h2>
+<p><img src="img/pyramid.gif" alt="Pyramids: An early project"></p>
 
 </section>
 <section>
 <h3 id="in-the-olden-times">In the olden times</h3>
 <p>Originally managed by a single person</p>
 <ul>
-<li><p>master builder</p>
+<li><p>Master builder</p>
 </li>
-<li><p>creative architect</p>
+<li><p>Creative architect</p>
 </li>
-<li><p>etc</p>
+<li><p>High priests</p>
+</li>
+<li><p>Etc.</p>
 </li>
 </ul>
+
+</section>
+<section>
+<h2 id="early-project-management">Early project management</h2>
+<p>Henry Laurence Gantt (1861 - 1919)</p>
+<p><img src="img/gantt.jpg" alt="Henry Gantt"></p>
+
+</section>
+<section>
+<p><img src="img/gnatt-diagram.jpg" alt="Gantt Diagram"></p>
 
 </section>
 <section>
@@ -86,15 +242,6 @@
 <p>First management tools developed in the 50&#39;s and 60&#39;s</p>
 <p>Goal: grip on projects to manage risks</p>
 <p>Have a predictable outcome</p>
-
-</section>
-<section>
-<h3 id="henry-gantt">Henry Gantt</h3>
-<p><img src="img/gantt.jpg" alt="Henry Gantt"></p>
-
-</section>
-<section>
-<p><img src="img/gnatt-diagram.jpg" alt="Gantt Diagram"></p>
 
 </section>
 <section>
@@ -119,7 +266,7 @@
 
 </section>
 <section>
-<p>Organized into clear phases</p>
+<h3 id="organized-into-clear-phases">Organized into clear phases</h3>
 <ul>
 <li class="fragment"><p>Requirements</p>
 </li>
@@ -133,9 +280,15 @@
 
 </section>
 <section>
-<p>Specialized teams</p>
-<p>Sequential development</p>
-<p>Long development cycles</p>
+<p><strong>Resulting in:</strong></p>
+<ul>
+<li><p>Specialized teams</p>
+</li>
+<li><p>Sequential development</p>
+</li>
+<li><p>Bigger projects</p>
+</li>
+</ul>
 
 </section>
 <section>
@@ -265,7 +418,7 @@
 <ul>
 <li><p><strong>Waterfall:</strong> Quality Assurance team</p>
 </li>
-<li><p><strong>Agile:</strong> Scrum team</p>
+<li><p><strong>Agile:</strong> Scrum teams</p>
 </li>
 </ul>
 
@@ -283,19 +436,19 @@
 
 </section>
 <section>
-<h2 id="accessibility-teams">Accessibility teams</h2>
+<h2 id="accessibilty-focus-changes">Accessibilty focus changes</h2>
 <ul>
-<li class="fragment"><p>Focus on training over audits</p>
+<li class="fragment"><p>Training over audits</p>
 </li>
 <li class="fragment"><p>Strategy over implementation</p>
 </li>
-<li class="fragment"><p>Teach scrum teams a11y independence</p>
+<li class="fragment"><p>Aim for a11y independence</p>
 </li>
 </ul>
 
 </section>
 <section>
-<p>How?</p>
+<p><strong>How?</strong></p>
 
 </section>
 </section>
@@ -305,8 +458,8 @@
 
 </section>
 <section>
-<p>Well know fact:</p>
-<p><strong><em>Bugs caught early, cost less to resolve.</em></strong></p>
+<p><strong>It costs significantly more to fix a bug at the end of the project than it does to fix the same bug earlier.</strong></p>
+<p><em>Pretty much every developer ever</em></p>
 
 </section>
 <section>
@@ -854,19 +1007,16 @@ axe.a11yCheck(fixture, function (results) {
 
 </section>
 <section>
-<p><strong>Scrum teams must test for accessibility</strong></p>
-
-</section>
-<section>
-<p><strong>Use a tool like aXe-core to catch common errors</strong></p>
-
-</section>
-<section>
-<p><strong>Unit tests your dynamic components</strong></p>
-
-</section>
-<section>
-<p><strong>Keep doing manual tests</strong></p>
+<ul>
+<li class="fragment"><p>Scrum teams must test for accessibility</p>
+</li>
+<li class="fragment"><p>Use a tool like aXe-core to catch common errors</p>
+</li>
+<li class="fragment"><p>Unit tests your dynamic components</p>
+</li>
+<li class="fragment"><p>Keep doing manual tests</p>
+</li>
+</ul>
 
 </section>
 <section>

@@ -10,17 +10,19 @@
 
 ## Test responsibility
 - **Waterfall:** Quality Assurance team
-- **Agile:** Scrum team
+- **Agile:** Scrum teams
 
 ## Waterfall to Agile {{ "fragmented": true }}
 - Move from manual towards automated testing
 - QA teams disappear
 - Creation of dedicated accessibility teams
 
-## Accessibility teams {{ "fragmented": true }}
-- Focus on training over audits
+## Accessibilty focus changes {{ "fragmented": true }}
+- Training over audits
 - Strategy over implementation
-- Teach scrum teams a11y independence
+- Aim for a11y independence
 
 ---
-How?
+**How?**
+
+## Time for coffee

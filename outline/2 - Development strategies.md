@@ -1,23 +1,26 @@
 # Development strategies
 
 ## Project management history
+![Pyramids: An early project](img/pyramid.gif)
 
 ### In the olden times
 Originally managed by a single person
-- master builder
-- creative architect
-- etc
+- Master builder
+- Creative architect
+- High priests
+- Etc.
+
+## Early project management
+Henry Laurence Gantt (1861 - 1919)
+![Henry Gantt](img/gantt.jpg)
+
+---
+![Gantt Diagram](img/gnatt-diagram.jpg)
 
 ## Projects mid 20th century
 First management tools developed in the 50's and 60's
 Goal: grip on projects to manage risks
 Have a predictable outcome
-
-### Henry Gantt
-![Henry Gantt](img/gantt.jpg)
-
----
-![Gantt Diagram](img/gnatt-diagram.jpg)
 
 ### Innovations
 - Phased approach
@@ -34,17 +37,17 @@ Have a predictable outcome
 Based on project management model
 Came about in the 70's and 80's
 
---- {{ "fragmented": true }}
-Organized into clear phases
+### Organized into clear phases {{ "fragmented": true }}
 - Requirements
 - Design
 - Implementation
 - Testing
 
 ---
-Specialized teams
-Sequential development
-Long development cycles
+**Resulting in:**
+- Specialized teams
+- Sequential development
+- Bigger projects
 
 --- {{ "fragmented": true }}
 Turns out software projects are hard

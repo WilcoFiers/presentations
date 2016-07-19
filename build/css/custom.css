@@ -21,7 +21,10 @@ section.grayed * {
 .reveal img[alt=love] {
 	margin:0 -0.1em -0.3em;
 	background:none;
+    display: inline-block;
+}
+
+.reveal section img {
 	border:0;
 	box-shadow:none;
-    display: inline-block;
 }

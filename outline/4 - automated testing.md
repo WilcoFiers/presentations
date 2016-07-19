@@ -1,8 +1,8 @@
 # Automated testing
 
 ---
-Well know fact:
-***Bugs caught early, cost less to resolve.***
+**It costs significantly more to fix a bug at the end of the project than it does to fix the same bug earlier.**
+*Pretty much every developer ever*
 
 ---
 Same is true for accessibility.
@@ -37,7 +37,7 @@ Test how components work together:
         function () {
       receiveMessage(function (msg) {
         expect(msg).toBe('foo');
-      })
+      });
       $('#iframe').contextWindow
         .sendMessage('foo');
     });

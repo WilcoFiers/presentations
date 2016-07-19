@@ -1,16 +1,10 @@
 # In conclusion
 
----
-**Scrum teams must test for accessibility**
-
----
-**Use a tool like aXe-core to catch common errors**
-
----
-**Unit tests your dynamic components**
-
----
-**Keep doing manual tests**
+--- {{ "fragmented": true }}
+- Scrum teams must test for accessibility
+- Use a tool like aXe-core to catch common errors
+- Unit tests your dynamic components
+- Keep doing manual tests
 
 ---
 @wilcofiers
