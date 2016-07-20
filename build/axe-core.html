@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<p><img src="img/wilco.jpg" alt="Wilco"></p>
+<p>Wilco Fiers</p>
+<p>Deque Systems</p>
+<p>Auto-WCAG Community Group</p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="automated-testing">Automated testing</h1>
+<ul>
+<li class="fragment"><p>Software to test other software</p>
+</li>
+<li class="fragment"><p>Can run very fast and very often</p>
+</li>
+<li class="fragment"><p>Find bugs due to changes</p>
+</li>
+<li class="fragment"><p>Making it cheaper to fix them</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="axe-core">Axe-core</h1>
+
+</section>
+<section>
+<h2 id="key-features-of-axe">Key features of axe</h2>
+<ul>
+<li><p>Open Source</p>
+</li>
+<li><p>Runs on the DOM</p>
+</li>
+<li><p>Understands your CSS</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="axe-manifesto">Axe Manifesto</h2>
+<p>Automated accessibility testing must</p>
+<ol>
+<li class="fragment"><p>Have zero false positives</p>
+</li>
+<li class="fragment"><p>Be lightweight and fast</p>
+</li>
+<li class="fragment"><p>Work in all modern browsers</p>
+</li>
+<li class="fragment"><p>Be tested automatically itself</p>
+</li>
+</ol>
+
+</section>
+<section>
+<h2 id="versatility-of-the-axe">Versatility of the axe</h2>
+<ul>
+<li><p>Plugins for browsers</p>
+</li>
+<li><p>Embedded in your HTML code</p>
+</li>
+<li><p>In many test runners</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="browser-plugins">Browser plugins</h3>
+<p><em>Alright stop, demo time</em></p>
+
+</section>
+<section>
+<h3 id="embedded-in-html">Embedded in HTML</h3>
+<pre><code class="lang-html">&lt;script src=&quot;axe.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = function () {
+    axe.a11yCheck(document, {
+      runOnly: { type: &quot;tag&quot;, values: [
+        &quot;wcag2a&quot;, &quot;wcag2aa&quot;, &quot;best-practice&quot;
+      ]}
+    }, (result) =&gt; console.log(result));
+  }
+&lt;/script&gt;
+</code></pre>
+
+</section>
+<section>
+<h3 id="task-runner">Task Runner</h3>
+<p><em>Axe integrates with many test runners</em> </p>
+<ul>
+<li class="fragment"><p>Jasmine</p>
+</li>
+<li class="fragment"><p>Mocha</p>
+</li>
+<li class="fragment"><p>Phantomjs</p>
+</li>
+<li class="fragment"><p>QUnit</p>
+</li>
+<li class="fragment"><p>Selenium</p>
+</li>
+</ul>
+
+</section>
+<section>
+<ul>
+<li class="fragment"><p>JUnit (Java)</p>
+</li>
+<li class="fragment"><p>WebdriverJS</p>
+</li>
+<li class="fragment"><p>Grunt</p>
+</li>
+<li class="fragment"><p>Cucumber</p>
+</li>
+<li class="fragment"><p>... and I&#39;ll stop there</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="what-axe-tests">What aXe tests</h1>
+
+</section>
+<section>
+<h2 id="the-54-rules-to-date">The 54 rules to date</h2>
+<ul>
+<li class="fragment"><p>Text alternatives and accessible names</p>
+</li>
+<li class="fragment"><p>Validity of your ARIA</p>
+</li>
+<li class="fragment"><p>Correct structure (tables, lists, title)</p>
+</li>
+<li class="fragment"><p>Zoom restrictions, auto-refresh</p>
+</li>
+<li class="fragment"><p>Color contrast, link visibility</p>
+</li>
+<li class="fragment"><p>... and more</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="but-not-everything">But not everything</h2>
+<ul>
+<li class="fragment"><p>Dynamic content</p>
+</li>
+<li class="fragment"><p>Descriptiveness of text</p>
+</li>
+<li class="fragment"><p>Error and timeout handling</p>
+</li>
+<li class="fragment"><p>Inappropriate semantics</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="test-coverage">Test coverage</h2>
+<p>A11y test tools will find 25% to 50% of your issues.</p>
+<p>The rest is up to you:</p>
+<ul>
+<li class="fragment"><p>Unit test accessibility</p>
+<p><em>Especially for dynamic content</em></p>
+</li>
+<li class="fragment"><p>Keep doing manual audits</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="questions-">Questions?</h1>
+<p><a href="https://deque.com/products/axe">deque.com/products/axe</a></p>
+<p><a href="https://deque.com/product/worldspace-attest">deque.com/product/worldspace-attest</a></p>
+<p><a href="https://github.com/dequelabs/axe-core">github.com/dequelabs/axe-core</a></p>
+<p><a href="https://twitter.com/wilcofiers">@wilcofiers</a></p>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>
