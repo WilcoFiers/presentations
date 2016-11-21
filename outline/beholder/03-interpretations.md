@@ -5,8 +5,8 @@
 - Would you recommend it?
 
 ```html
-<h1>Welcome to Kalamar</h1>
-<h3>The kingdom of prosperity</h3>
+    <h1>Welcome to Kalamar</h1>
+    <h3>The kingdom of prosperity</h3>
 ```
 
 ## Require landmarks
@@ -14,11 +14,11 @@
 - Would you recommend it?
 
 ```html
-<header>...</header>
-<nav>...</nav>
-<main>...</main>
-<aside>...</aside>
-<footer>...</footer>
+    <header>...</header>
+    <nav>...</nav>
+    <main>...</main>
+    <aside>...</aside>
+    <footer>...</footer>
 ```
 
 ## Required keys for keyboard control
@@ -26,8 +26,8 @@
 - Would you recommend it?
 
 ```html
-<span role="radio" tabindex="0">Dungeon</span>
-<span role="radio" tabindex="0">Dragon</span>
+    <span role="radio" tabindex="0">Dungeon</span>
+    <span role="radio" tabindex="0">Dragon</span>
 ```
 
 ## Use of valid ARIA
@@ -35,9 +35,9 @@
 - Would you recommend it?
 
 ```html
-<button aria-checked="true">
-  I vow to cause no inaccessibility
-</button>
+    <button aria-checked="true">
+      I vow to cause no inaccessibility
+    </button>
 ```
 
 ## Invalid closing tags
@@ -45,9 +45,9 @@
 - Would you recommend it?
 
 ```html
-<strong><p>
-  Important!</strong> ...
-</p>
+    <strong><p>
+      Important!</strong> ...
+    </p>
 ```
 
 ## Prioritizing

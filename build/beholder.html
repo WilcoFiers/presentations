@@ -144,9 +144,7 @@
 <li><p>Would you recommend it?</p>
 </li>
 </ul>
-<pre><code class="lang-html">
-&lt;h1&gt;Welcome to Kalamar&lt;/h1&gt;
-
+<pre><code class="lang-html">&lt;h1&gt;Welcome to Kalamar&lt;/h1&gt;
 &lt;h3&gt;The kingdom of prosperity&lt;/h3&gt;
 </code></pre>
 
@@ -159,15 +157,10 @@
 <li><p>Would you recommend it?</p>
 </li>
 </ul>
-<pre><code class="lang-html">
-&lt;header&gt;...&lt;/header&gt;
-
+<pre><code class="lang-html">&lt;header&gt;...&lt;/header&gt;
 &lt;nav&gt;...&lt;/nav&gt;
-
 &lt;main&gt;...&lt;/main&gt;
-
 &lt;aside&gt;...&lt;/aside&gt;
-
 &lt;footer&gt;...&lt;/footer&gt;
 </code></pre>
 
@@ -180,9 +173,7 @@
 <li><p>Would you recommend it?</p>
 </li>
 </ul>
-<pre><code class="lang-html">
-&lt;span role=&quot;radio&quot; tabindex=&quot;0&quot;&gt;Dungeon&lt;/span&gt;
-
+<pre><code class="lang-html">&lt;span role=&quot;radio&quot; tabindex=&quot;0&quot;&gt;Dungeon&lt;/span&gt;
 &lt;span role=&quot;radio&quot; tabindex=&quot;0&quot;&gt;Dragon&lt;/span&gt;
 </code></pre>
 
@@ -195,11 +186,8 @@
 <li><p>Would you recommend it?</p>
 </li>
 </ul>
-<pre><code class="lang-html">
-&lt;button aria-checked=&quot;true&quot;&gt;
-
+<pre><code class="lang-html">&lt;button aria-checked=&quot;true&quot;&gt;
   I vow to cause no inaccessibility
-
 &lt;/button&gt;
 </code></pre>
 
@@ -212,11 +200,8 @@
 <li><p>Would you recommend it?</p>
 </li>
 </ul>
-<pre><code class="lang-html">
-&lt;strong&gt;&lt;p&gt;
-
+<pre><code class="lang-html">&lt;strong&gt;&lt;p&gt;
   Important!&lt;/strong&gt; ...
-
 &lt;/p&gt;
 </code></pre>
 
@@ -556,70 +541,77 @@
 <section>
 <h2 id="example-page-title-1-5-">Example: Page Title (1/5)</h2>
 <pre><code class="lang-markdown">
-  ---
+---
 
-  rule_id: SC3-1-1-html
+rule_id: SC3-1-1-html
 
-  name: Primary language of page
+name: Primary language of page
 
-  test_mode: automatic
+test_mode: automatic
 
-  criteria:
+criteria:
 
-  - 3.1.1 # Language of Page (Level A)
+- 3.1.1 # Language of Page (Level A)
 
-  authors:
+authors:
 
-  - Annika Nietzio
+- Annika Nietzio
+
+---
 </code></pre>
 
 </section>
 <section>
 <h2 id="example-page-title-2-5-">Example: Page Title (2/5)</h2>
-<pre><code class="lang-markdown">
-  ## Description
+<p>```markdown</p>
 
-  This test checks that the primary language of the web content can be programmatically determined.
-</code></pre>
+</section>
+<section>
+<h2 id="description">Description</h2>
+<p>This test checks that the primary language of the web content can be programmatically determined.</p>
+<p>```</p>
 
 </section>
 <section>
 <h2 id="example-page-title-3-5-">Example: Page Title (3/5)</h2>
-<pre><code class="lang-markdown">
-  ## Test procedure
+<p>```markdown</p>
 
-  ### Selector
+</section>
+<section>
+<h2 id="test-procedure">Test procedure</h2>
 
-  Select the `html` element.
-</code></pre>
+</section>
+<section>
+<h3 id="selector">Selector</h3>
+<p>Select the <code>html</code> element.</p>
+<p>```</p>
 
 </section>
 <section>
 <h2 id="example-page-title-4-5-">Example: Page Title (4/5)</h2>
-<pre><code class="lang-markdown">
-  ### Step 1
+<p>```markdown</p>
 
-  If `lang` attribute exists:
-
-  L1 = value of `lang` attribute.
-
-  If neither `lang` nor `xml:lang` are specified, return Failed-1
-
-  Else, continue with Step2.
-</code></pre>
+</section>
+<section>
+<h3 id="step-1">Step 1</h3>
+<p>If <code>lang</code> attribute exists:</p>
+<p>L1 = value of <code>lang</code> attribute.</p>
+<p>If neither <code>lang</code> nor <code>xml:lang</code> are specified, return Failed-1</p>
+<p>Else, continue with Step2.</p>
+<p>```</p>
 
 </section>
 <section>
 <h2 id="example-page-title-5-5-">Example: Page Title (5/5)</h2>
-<pre><code class="lang-markdown">
-  ### Step 2
+<p>```markdown</p>
 
-  Compare L1 to the list of all valid languages.
-
-  If L1 is not on the list, return Failed-2
-
-  Else, return Passed-1
-</code></pre>
+</section>
+<section>
+<h3 id="step-2">Step 2</h3>
+<p>Compare L1 to the list of all valid languages.</p>
+<p>If L1 is not on the list, return Failed-2</p>
+<p>Else, return Passed-1</p>
+<p>```</p>
 
 </section>
 <section>
