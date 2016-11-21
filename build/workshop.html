@@ -36,9 +36,7 @@
 <section>
 <h2 id="slide-deck">Slide deck</h2>
 <p><a href="http://goo.gl/r6Cs00">http://goo.gl/r6Cs00</a></p>
-
-</section>
-<section>
+<hr>
 <p>Joined Deque because I <img src="img/heart.png" alt="love"> aXe-core</p>
 <p>Developed WCAG-EM Report Tool</p>
 <p>Former dev on QuailJS</p>
@@ -258,9 +256,7 @@
 </section>
 <section data-background="img/waterfall.jpg" class="darken">
 <h2 id="waterfall-model">Waterfall model</h2>
-
-</section>
-<section>
+<hr>
 <p>Based on project management model</p>
 <p>Came about in the 70&#39;s and 80&#39;s</p>
 
@@ -445,9 +441,7 @@
 <li class="fragment"><p>Aim for a11y independence</p>
 </li>
 </ul>
-
-</section>
-<section>
+<hr>
 <p><strong>How?</strong></p>
 
 </section>
@@ -459,20 +453,14 @@
 <section>
 <section>
 <h1 id="automated-testing">Automated testing</h1>
-
-</section>
-<section>
+<hr>
 <p><strong>It costs significantly more to fix a bug at the end of the project than it does to fix the same bug earlier.</strong></p>
 <p><em>Pretty much every developer ever</em></p>
-
-</section>
-<section>
+<hr>
 <p>Same is true for accessibility.</p>
 <p>Accessibility costs up front 5% of project budget</p>
 <p>Accessibility remediation can cost upward of 50%</p>
-
-</section>
-<section>
+<hr>
 <p>Different types of tests that can be automated</p>
 <ul>
 <li class="fragment"><p>Unit tests</p>
@@ -530,9 +518,7 @@ it(&#39;returns the homepage from /home&#39;, () =&gt; {
   expect(alt).toBe(&#39;Deque&#39;);
 });
 </code></pre>
-
-</section>
-<section>
+<hr>
 <p>Many things can be tested like this:</p>
 <ul>
 <li class="fragment"><p>Are the right elements marked as headings</p>
@@ -544,9 +530,7 @@ it(&#39;returns the homepage from /home&#39;, () =&gt; {
 <li class="fragment"><p>etc.</p>
 </li>
 </ul>
-
-</section>
-<section>
+<p>--- {{ &quot;fragmented&quot;: true }}</p>
 <p>Question is, how valuable are such tests?</p>
 <ul>
 <li class="fragment"><p>They are brittle, small changes can break this test</p>
@@ -554,13 +538,9 @@ it(&#39;returns the homepage from /home&#39;, () =&gt; {
 <li class="fragment"><p>It only tests changes in code, not errors</p>
 </li>
 </ul>
-
-</section>
-<section>
+<hr>
 <p>We need to test at a higher level.</p>
-
-</section>
-<section>
+<hr>
 <p>Accessibility Feature test:</p>
 <pre><code class="lang-javascript">it(&#39;has an alt on each image&#39;, () =&gt; {
   browser.url(&#39;http://localhost/home&#39;);
@@ -571,9 +551,7 @@ it(&#39;returns the homepage from /home&#39;, () =&gt; {
   });
 })
 </code></pre>
-
-</section>
-<section>
+<hr>
 <p>But this is true for every page, right?</p>
 
 </section>
@@ -581,9 +559,7 @@ it(&#39;returns the homepage from /home&#39;, () =&gt; {
 <section>
 <section>
 <h1 id="web-a11y-evaluation-tools">Web A11y Evaluation Tools</h1>
-
-</section>
-<section>
+<hr>
 <p>There are many tools for accessibility testing</p>
 <p><a href="https://www.w3.org/WAI/ER/tools/">w3.org/WAI/ER/tools/</a></p>
 <p>Over the past year, this list has doubled!!</p>
@@ -661,9 +637,7 @@ it(&#39;returns the homepage from /home&#39;, () =&gt; {
 <li class="fragment"><p>Documentation and transparency</p>
 </li>
 </ul>
-
-</section>
-<section>
+<hr>
 <p>What you&#39;ll end up using is the Rules engine.</p>
 <p>A Rule Engine runs a series of rules on a web page.</p>
 <p>Each Engine has their own rule set</p>
@@ -722,25 +696,19 @@ gulp karma-a11y
 <h2 id="your-first-test">Your first test</h2>
 <p>Go to the folder <code>material/test/accessibility</code></p>
 <p>Open the file <code>button.a11y.js</code></p>
-
-</section>
-<section>
+<hr>
 <p>Define a group of tests</p>
 <pre><code class="lang-javascript">describe(&#39;md-button accessibility&#39;,
     function () {
   //...
 });
 </code></pre>
-
-</section>
-<section>
+<hr>
 <p>Identify the module to Angular</p>
 <pre><code class="lang-javascript">beforeEach(module(
     &#39;material.components.button&#39;));
 </code></pre>
-
-</section>
-<section>
+<hr>
 <p>Set up a DOM element to test on</p>
 <pre><code class="lang-javascript">var fixture, compileToFixture;
 beforeEach(inject(function
@@ -751,18 +719,14 @@ beforeEach(inject(function
       $compile, $rootScope);
 }));
 </code></pre>
-
-</section>
-<section>
+<hr>
 <p>Define a test</p>
 <pre><code class="lang-javascript">it(&#39;has 0 violations in axe&#39;,
     function (done) {
     // ... test code ...
 });
 </code></pre>
-
-</section>
-<section>
+<hr>
 <p>Create a component and test using axe</p>
 <pre><code class="lang-javascript">compileToFixture(
     &#39;&lt;md-button&gt;Button Name&lt;/md-button&gt;&#39;);
@@ -792,9 +756,7 @@ axe.a11yCheck(fixture, function (results) {
 <li><p><a href="http://material.angularjs.org/">material.angularjs.org/</a>: Angular Material documentation</p>
 </li>
 </ul>
-
-</section>
-<section>
+<hr>
 <p><strong>Suggested tests to try</strong></p>
 <ul>
 <li><p>test md-button when disabled (easy)</p>
@@ -978,9 +940,7 @@ axe.a11yCheck(fixture, function (results) {
 <li class="fragment"><p>Keep doing manual tests</p>
 </li>
 </ul>
-
-</section>
-<section>
+<hr>
 <p><img src="img/wilco.jpg" alt="Wilco"></p>
 <p>@wilcofiers</p>
 <p><a href="https://www.deque.com/products/axe/">deque.com/products/axe/</a></p>

@@ -39,7 +39,7 @@ Automated accessibility testing must
 ```
 
 ### Task Runner {{ "fragmented": true }}
-*Axe integrates with many test runners* 
+*Axe integrates with many test runners*
 
 - Jasmine
 - Mocha
@@ -47,7 +47,7 @@ Automated accessibility testing must
 - QUnit
 - Selenium
 
---- {{ "fragmented": true }}
+---- {{ "fragmented": true }}
 - JUnit (Java)
 - WebdriverJS
 - Grunt

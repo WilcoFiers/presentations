@@ -22,11 +22,11 @@ let presentations = fs.readdirSync(sourceDir);
 presentations.map((folder) => path.join(sourceDir, folder))
 .filter((folder) => fs.lstatSync(folder).isDirectory())
 .forEach((folder) => {
-	
+
 	let outline = fs.readdirSync(folder);
 
 	let htmlFile = path.join(targetDir, (folder.split('/').pop()) + '.html');
-	
+
 	let sheets = outline.filter((file) => file.substr(-3) === '.md')
 	.map((file) => {
 		let markdown = fs.readFileSync(path.join(folder, file), 'utf8');
@@ -38,9 +38,9 @@ presentations.map((folder) => path.join(sourceDir, folder))
 
 		markdown // split after h2 headings
 		.replace(/\n##/g, '<SEC>\n##').split('<SEC>')
-		// Split at '---''
+		// Split at '----''
 		.reduce((sections, section) => {
-			return sections.concat(section.split('\n---'));
+			return sections.concat(section.split('\n----'));
 		}, [])
 		// Put it all in section elements
 		.forEach((section) => {

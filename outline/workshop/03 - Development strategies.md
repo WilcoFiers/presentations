@@ -14,7 +14,7 @@ Originally managed by a single person
 Henry Laurence Gantt (1861 - 1919)
 ![Henry Gantt](img/gantt.jpg)
 
----
+----
 ![Gantt Diagram](img/gnatt-diagram.jpg)
 
 ## Projects mid 20th century
@@ -43,27 +43,29 @@ Came about in the 70's and 80's
 - Implementation
 - Testing
 
----
+----
 **Resulting in:**
 - Specialized teams
 - Sequential development
 - Bigger projects
 
---- {{ "fragmented": true }}
+---- {{ "fragmented": true }}
+
 Turns out software projects are hard
 Definition and documentation up front
 However:
 - Requirements change
 - Users don't know what they want
 
---- {{ "fragmented": true }}
+---- {{ "fragmented": true }}
+
 **Waterfall problems:**
 - Requirement changes are costly
 - Going back was often impossible, as the team that could do the change was already on to the next project.
 - Silo thinking, a focus on meeting ones own goals over end product quality
 - Most software projects are very much unique
 
----
+----
 Douglas Crockford
 ***"Programing is not manufacturing, it's discovery"***
 
@@ -73,17 +75,17 @@ Douglas Crockford
 	"data-background": "img/manifesto-team.jpg",
 	"class": "grayed"
 }}
----
+----
 Came around the 2000's
 Manifesto for Agile Software Development, 2001
 
---- {{ "fragmented": true }}
+---- {{ "fragmented": true }}
 **How agile differs**
 - Less up front planning, less documentation
 - Multi-disciplinary teams
 - Close involvement of customers
 
----
+----
 Adaptive process
 Discover what to make, as you are making it
 Short iterations and frequent releases

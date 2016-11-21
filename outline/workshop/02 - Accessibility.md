@@ -1,13 +1,13 @@
 # Accessibility
 
----
+----
 
 ![Sir Tim Berners-Lee](img/sir-tim.jpg)
 The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 
 *Sir Tim Berners-Lee*, inventor of the World Wide Web
 
-## It's about people 
+## It's about people
 We are all different
 - Young and old
 - At home or on the go
