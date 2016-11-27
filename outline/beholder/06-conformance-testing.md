@@ -2,7 +2,7 @@
 Accessibility Conformance Testing
 Part of the WCAG Working Group
 
-![Wilco](img/taskforce.png)
+![Bunch of lego figures, no relation](img/taskforce.png)
 
 ## ACT Taskforce Goals {{ "fragmented": true }}
 
