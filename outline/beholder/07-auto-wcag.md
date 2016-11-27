@@ -25,22 +25,22 @@ Write rules, not tools.
 ## Example: Page Title (2/5)
 
 ```markdown
-    ## Description
+    == Description ==
     This test checks that the primary language of the web content can be programmatically determined.
 ```
 
 ## Example: Page Title (3/5)
 
 ```markdown
-    ## Test procedure
-    ### Selector
+    = Test procedure =
+    == Selector ==
     Select the `html` element.
 ```
 
 ## Example: Page Title (4/5)
 
 ```markdown
-    ### Step 1
+    = Step 1 =
     If `lang` attribute exists:
     L1 = value of `lang` attribute.
     If neither `lang` nor `xml:lang` are specified, return Failed-1
@@ -50,7 +50,7 @@ Write rules, not tools.
 ## Example: Page Title (5/5)
 
 ```markdown
-    ### Step 2
+    === Step 2 ===
     Compare L1 to the list of all valid languages.
     If L1 is not on the list, return Failed-2
     Else, return Passed-1
