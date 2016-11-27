@@ -34,3 +34,50 @@ section.grayed * {
     margin-top: -50px;
     margin-right: -50px;
 }
+
+.party {
+  height:100vh !important;
+  width: 100vw !important;
+  position:relative;
+}
+.party h2, .party p {
+  position: absolute;
+}
+.party h2 {
+  background: white;
+  bottom: 0
+}
+
+.party p:nth-child(2) {
+  background: red;
+  left:0
+}
+.party p:nth-child(3) {
+  background: yellow;
+  right:0
+}
+.party p:nth-child(4) {
+  background: blue;
+  right:0;
+  bottom:0;
+}
+.party p:nth-child(5) {
+  background: green;
+  left:0;
+  bottom:0
+}
+.party p:nth-child(6) {
+  background: cyan;
+  left:0;
+  bottom:0
+}
+
+section.invert * {
+  color: white;
+}
+
+section.invert.darken {
+  background:rgba(0,0,0,0.5);
+  box-shadow:0 0 5px 10px rgba(0,0,0,0.3);
+
+}
