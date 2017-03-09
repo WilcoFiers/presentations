@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section class="deque-intro">
+<p><img src="img/deque-logo.png" alt="Deque"></p>
+<p>Wilco Fiers</p>
+<p>Deque Systems</p>
+<p><img src="img/wilco.jpg" alt="Wilco"></p>
+
+</section>
+<section>
+<h2 id="many-hats">Many hats</h2>
+<p>Auto-WCAG Chair</p>
+<p>Deque rep in EUs WADEX-group</p>
+<p>ACT Taskforce facilitator</p>
+<p><img src="img/many-hats.jpg" alt=""></p>
+
+</section>
+<section>
+<h2 id="continuous-integration-of-ax">Continuous Integration of AX</h2>
+<p>A developer&#39;s story</p>
+
+</section>
+<section>
+<h2 id="what-to-expect">What to expect</h2>
+<ul>
+<li><p>The dev cycle</p>
+</li>
+<li><p>Software testing</p>
+</li>
+<li><p>Demo</p>
+</li>
+<li><p>Axe-core</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="the-dev-cycle">The dev cycle</h1>
+<p><img src="img/deaf-cycle.gif" alt="Deaf sign for cycle"></p>
+
+</section>
+<section>
+<h2 id="what-do-we-use">What do we use</h2>
+<ul>
+<li class="fragment"><p>Editors (IDEs)</p>
+</li>
+<li class="fragment"><p>Installation tools</p>
+</li>
+<li class="fragment"><p>Version control</p>
+</li>
+<li class="fragment"><p>Command line</p>
+</li>
+<li class="fragment"><p>Build tools</p>
+</li>
+<li class="fragment"><p>Test tools</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="the-command-line-cli-">The command line (CLI)</h2>
+<p>No I&#39;m not hacking your WiFi</p>
+<ul>
+<li><p>It&#39;s just Windows or OSx</p>
+</li>
+<li><p>But you type instead of clicking</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="it-s-just-like-those-old-muds">It&#39;s just like those old MUDs</h3>
+<p><img src="img/mud.jpg" alt="Multi-user dungeon"></p>
+
+</section>
+<section>
+<h2 id="version-control">Version Control</h2>
+<p>Example: GIT</p>
+<ul>
+<li class="fragment"><p>Record keeping</p>
+</li>
+<li class="fragment"><p>Branching</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="branching">Branching</h3>
+<p><img src="img/branching.png" alt="Branch from master, into develop, into feature(s)"></p>
+
+</section>
+<section>
+<h2 id="installation-tools">Installation tools</h2>
+<p>Example: NPM</p>
+<ul>
+<li class="fragment"><p>Packaging</p>
+</li>
+<li class="fragment"><p>Dependencies</p>
+</li>
+<li class="fragment"><p>Distribution</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="build-tools">Build tools</h2>
+<p>Example: Grunt</p>
+<ul>
+<li class="fragment"><p>Compile CSS or JavaScript</p>
+</li>
+<li class="fragment"><p>Concatenate and minify files</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="test-tools">Test Tools</h2>
+<ul>
+<li><p>Command line tools</p>
+</li>
+<li><p>Browser tools</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="continuous-integration">Continuous Integration</h2>
+<ul>
+<li><p>Jenkins</p>
+</li>
+<li><p>Travis CI</p>
+</li>
+<li><p>SonarQube</p>
+</li>
+</ul>
+
+</section>
+<section>
+<p><img src="img/sonar.png" alt="Multi-user dungeon"></p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="about-testing">About testing</h1>
+
+</section>
+<section>
+<h2 id="the-old-school-way">The old school way</h2>
+<p>Like my grandma used to do</p>
+<ul>
+<li><p>Time consuming</p>
+</li>
+<li><p>Costly</p>
+</li>
+<li><p>Dedicated test teams</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="automated-testing">Automated testing</h2>
+<p>All the cool kids do it</p>
+<ul>
+<li><p>Very fast, runs in minutes</p>
+</li>
+<li><p>Written by developers</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="your-test-stack">Your test stack</h2>
+<ul>
+<li><p>50% Unit testing</p>
+</li>
+<li><p>25% Integration testing</p>
+</li>
+<li><p>15% Functional testing</p>
+</li>
+<li><p>10% Manual testing</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="ax-tangent">AX tangent</h2>
+<ul>
+<li><p>50% Accessibility test tools</p>
+</li>
+<li><p>25% Custom AX tests</p>
+</li>
+<li><p>15% QA testing</p>
+</li>
+<li><p>10% Expert testing</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="joke-1">Joke #1</h2>
+<p>What&#39;s the favorite tool of vikings and lumberjacks?</p>
+<ul>
+<li class="fragment"><img src="img/axe.png" alt="Axe-core logo"></li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="automated-testing">Automated testing</h1>
+
+</section>
+<section>
+<h2 id="unit-test">unit test</h2>
+<p>Test individual bits of code</p>
+<pre><code class="lang-javascript">// Test the addNumbers function
+it(&#39;should adds 3 numbers together&#39;, () =&gt; {
+  let result = addNumbers(1, 2, 3);
+  expect(result).toBe(6);
+});
+</code></pre>
+
+</section>
+<section>
+<h2 id="integration-test">Integration test</h2>
+<p>Test how components work together:</p>
+<pre><code class="lang-javascript">// Message an iframe
+it(&#39;receives messages send from an iframe&#39;, () =&gt; {
+  receiveMessage((msg) =&gt;
+    expect(msg).toBe(&#39;foo&#39;));
+  $(&#39;#iframe&#39;).contextWindow
+    .sendMessage(&#39;foo&#39;);
+});
+</code></pre>
+
+</section>
+<section>
+<h2 id="functional-testing">Functional Testing</h2>
+<p>Test high level functionality</p>
+<pre><code class="lang-javascript">// Test we get back the right page
+it(&#39;returns the homepage from /home&#39;, () =&gt; {
+  browser.url(&#39;http://localhost/home&#39;);
+    expect(browser.getTitle())
+    .toContain(&#39;Homepage&#39;);
+});
+</code></pre>
+
+</section>
+<section>
+<h2 id="axe-testing">Axe testing</h2>
+<pre><code class="lang-javascript">it(&#39;passes axe rules&#39;, (done) =&gt; {
+  let elm = React.createElement(MyComponent)
+  let reactNode = mountToDoc(elm)
+
+
+  axe.run(reactNode.getDOMNode(), result =&gt; {
+    assert.lengthOf(result.violations, 0)
+    done()
+  })
+})
+</code></pre>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="axe-core">Axe-core</h1>
+
+</section>
+<section>
+<h2 id="key-features-of-axe">Key features of axe</h2>
+<ul>
+<li><p>Open Source</p>
+</li>
+<li><p>Runs on the DOM</p>
+</li>
+<li><p>Understands your CSS</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="axe-manifesto">Axe Manifesto</h2>
+<p>Automated accessibility testing must</p>
+<ol>
+<li class="fragment"><p>Have zero false positives</p>
+</li>
+<li class="fragment"><p>Be lightweight and fast</p>
+</li>
+<li class="fragment"><p>Work in all modern browsers</p>
+</li>
+<li class="fragment"><p>Be tested automatically itself</p>
+</li>
+</ol>
+
+</section>
+<section>
+<h2 id="versatility-of-the-axe">Versatility of the axe</h2>
+<ul>
+<li><p>Plugins for browsers</p>
+</li>
+<li><p>Embedded in your HTML code</p>
+</li>
+<li><p>In many test runners</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="task-runner">Task Runner</h3>
+<p><em>Axe integrates with many test runners</em></p>
+<ul>
+<li class="fragment"><p>Jasmine</p>
+</li>
+<li class="fragment"><p>Mocha</p>
+</li>
+<li class="fragment"><p>Phantomjs</p>
+</li>
+<li class="fragment"><p>QUnit</p>
+</li>
+<li class="fragment"><p>Selenium</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="task-runner">Task Runner</h3>
+<ul>
+<li class="fragment"><p>JUnit (Java)</p>
+</li>
+<li class="fragment"><p>WebdriverJS</p>
+</li>
+<li class="fragment"><p>Grunt</p>
+</li>
+<li class="fragment"><p>Cucumber</p>
+</li>
+<li class="fragment"><p>... and I&#39;ll stop there</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="joke-2">Joke #2</h2>
+<p>Knock knock.</p>
+<ul>
+<li class="fragment"><img src="img/johnny.jpg" alt="Here&#39;s Johnny"></li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="demo">Demo</h1>
+<p>A day in the life or me.</p>
+<p>Let&#39;s do some coding!</p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="recap">Recap</h1>
+<ul>
+<li class="fragment"><p>Programming isn&#39;t magic</p>
+</li>
+<li class="fragment"><p>AX testing is the same as other types of testing</p>
+</li>
+<li class="fragment"><p>ARIA makes automated tests easier</p>
+</li>
+<li class="fragment"><p>Automated Test Tools help</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="questions-">Questions?</h2>
+<p><a href="https://deque.com/products/axe">deque.com/products/axe</a></p>
+<p><a href="https://deque.com/product/worldspace-attest">deque.com/product/worldspace-attest</a></p>
+<p><a href="https://github.com/dequelabs/axe-core">github.com/dequelabs/axe-core</a></p>
+<p><a href="https://twitter.com/wilcofiers">@wilcofiers</a></p>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>
