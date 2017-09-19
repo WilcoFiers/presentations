@@ -1,15 +1,16 @@
-Hoe tools en standaarden digitoegankelijkheid veranderen
+Hoe tools en standaarden 
+digitoegankelijkheid veranderen
 
-
-= Tools =
+----
+# Tools
 
 Er is een explosie geweest van tools in digitoegankelijkheid
 
-== Cambrian WCAG Explosie ==
+## Cambrian WCAG Explosie
 
-- 
+Todo
 
-== De grote integratie race ==
+## De grote integratie race
 
 Tool ontwikkelaars zijn druk in competitie met elkaar om hun test tool op zo veel mogelijk plaatsen in gebruik te krijgen.
 
@@ -22,7 +23,8 @@ Tool ontwikkelaars zijn druk in competitie met elkaar om hun test tool op zo vee
 - Acceptatietests
 
 
-= De grote verschillen =
+----
+# De grote verschillen
 
 Tools geven zelden hetzelfde antwoord
 
@@ -32,37 +34,38 @@ Dit heeft drie oorzaken
 - Onnauwkeurige regels
 - False positives
 
-== False positives ==
+## False positives
 
 Een onvoorziene situatie die leidt tot fout keuren van iets dat niet fout is.
 
-Voorbeeld: Een <img /> zonder alt die verborgen is.
+Voorbeeld: Een `<img />` zonder alt die verborgen is.
 
-== Onnauwkeurigheid in regels ==
+
+## Onnauwkeurigheid in regels
 
 Een bekende uitzondering die niet in de tool is ingebouwd, vaak omdat dit niet te automatiserne is.
 
 Voorbeeld: Alternatieve kleuren op een website.
 
-== Verschil in interpretatie ==
+## Verschil in interpretatie
 
-Voorbeeld: Een pagina zonder <h1>
+Voorbeeld: Een pagina zonder `<h1>`
 
 
-
-= Consquenties =
+----
+# Consquenties
 
 Verschillen worden ineens pijnlijk zichtbaar
 
 De vijf fases van WCAG vergelijken:
 
-
+----
 - Ontkenning: 
 - Verwarring, wat is fout en wat niet?
 - Boosheid: Jullie weten niet wat je doet?
 - Acceptatie: ... Hopelijk?
 
+----
+# Standaarden
 
-
-= Standaarden =
-
+TODO
