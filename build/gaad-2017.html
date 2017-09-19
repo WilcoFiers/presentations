@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<p><img src="img/wilco.jpg" alt="Wilco"></p>
+<p>Wilco Fiers</p>
+<p>Deque Research (NL)</p>
+<p>ACT Taskforce (W3C)</p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="axe-core">Axe-core</h1>
+
+</section>
+<section>
+<h2 id="key-features-van-axe">Key features van axe</h2>
+<ul>
+<li><p>Open Source</p>
+</li>
+<li><p>Draait in de DOM</p>
+</li>
+<li><p>Begrijpt CSS</p>
+</li>
+<li><p>Werkt offline</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="axe-manifest">Axe Manifest</h2>
+<ol>
+<li class="fragment"><p>Geen false positives</p>
+</li>
+<li class="fragment"><p>Snel en eenvoudig in gebruik</p>
+</li>
+<li class="fragment"><p>Werkt in alle moderne browsers</p>
+</li>
+<li class="fragment"><p>Volledig automatisch getest</p>
+</li>
+</ol>
+
+</section>
+<section>
+<h2 id="versatility-of-the-axe">Versatility of the axe</h2>
+<ul>
+<li><p>Plugins voor Chrome &amp; Firefox</p>
+</li>
+<li><p>Embedded in your HTML code</p>
+</li>
+<li><p>In many test runners</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="browser-plugins">Browser plugins</h3>
+<p><em>Alright stop, demo time</em></p>
+
+</section>
+<section>
+<h3 id="embedded-in-html">Embedded in HTML</h3>
+<pre><code class="lang-html">&lt;script src=&quot;axe.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.onload = function () {
+    axe.run({
+      runOnly: { type: &quot;tag&quot;, values: [
+        &quot;wcag2a&quot;, &quot;wcag2aa&quot;, &quot;best-practice&quot;
+      ]}
+  }).then(result =&gt; console.log(result.violations));
+  }
+&lt;/script&gt;
+</code></pre>
+
+</section>
+<section>
+<h3 id="integraties">Integraties</h3>
+<p><em>aXe draait in veel vormen</em></p>
+<ul>
+<li class="fragment"><p>Jasmine</p>
+</li>
+<li class="fragment"><p>Mocha</p>
+</li>
+<li class="fragment"><p>Phantomjs</p>
+</li>
+<li class="fragment"><p>QUnit</p>
+</li>
+<li class="fragment"><p>Selenium</p>
+</li>
+</ul>
+
+</section>
+<section>
+<ul>
+<li class="fragment"><p>JUnit (Java)</p>
+</li>
+<li class="fragment"><p>WebdriverJS</p>
+</li>
+<li class="fragment"><p>Grunt</p>
+</li>
+<li class="fragment"><p>Cucumber</p>
+</li>
+<li class="fragment"><p>... and I&#39;ll stop there</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h2 id="wat-axe-test">Wat aXe test</h2>
+<ul>
+<li class="fragment"><p>Tekstalternatieven en accessible names</p>
+</li>
+<li class="fragment"><p>Correct ARIA gebruik</p>
+</li>
+<li class="fragment"><p>Correcte structuur (tables, lists, title)</p>
+</li>
+<li class="fragment"><p>Zoom, auto-refresh</p>
+</li>
+<li class="fragment"><p>Kleurcontrast</p>
+</li>
+<li class="fragment"><p>... en meer</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="maar-niet-alles">Maar niet alles</h2>
+<ul>
+<li class="fragment"><p>Dynamische content</p>
+</li>
+<li class="fragment"><p>Duidelijke tekst</p>
+</li>
+<li class="fragment"><p>Foutmeldingen en timeouts</p>
+</li>
+<li class="fragment"><p>Toetsenbordbediening</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="test-coverage">Test coverage</h2>
+<ul>
+<li class="fragment"><p>25 - 50% van alle problemen</p>
+</li>
+<li class="fragment"><p>WCAG Level A, AA en Best Practices</p>
+</li>
+<li class="fragment"><p>0 criteria volledig automatisch</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="vragen-">Vragen?</h1>
+<p><a href="https://axe-core.org">axe-core.org</a></p>
+<p><a href="https://twitter.com/wilcofiers">@wilcofiers</a></p>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>

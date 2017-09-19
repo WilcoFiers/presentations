@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<p>Hoe tools en standaarden digitoegankelijkheid veranderen</p>
+<p>= Tools =</p>
+<p>Er is een explosie geweest van tools in digitoegankelijkheid</p>
+<p>== Cambrian WCAG Explosie ==</p>
+<ul>
+<li></li>
+</ul>
+<p>== De grote integratie race ==</p>
+<p>Tool ontwikkelaars zijn druk in competitie met elkaar om hun test tool op zo veel mogelijk plaatsen in gebruik te krijgen.</p>
+<ul>
+<li><p>Test frameworks (Jasmin, Jest, Nightwatch, etc.)</p>
+</li>
+<li><p>Command line tools</p>
+</li>
+<li><p>Browser plugins</p>
+</li>
+<li><p>Bookmarklets</p>
+</li>
+<li><p>Stand-alone accessibility platforms</p>
+</li>
+<li><p>WYSIWIG editors</p>
+</li>
+<li><p>Acceptatietests</p>
+</li>
+</ul>
+<p>= De grote verschillen =</p>
+<p>Tools geven zelden hetzelfde antwoord</p>
+<p>Dit heeft drie oorzaken</p>
+<ul>
+<li><p>Verschil in interpretatie</p>
+</li>
+<li><p>Onnauwkeurige regels</p>
+</li>
+<li><p>False positives</p>
+</li>
+</ul>
+<p>== False positives ==</p>
+<p>Een onvoorziene situatie die leidt tot fout keuren van iets dat niet fout is.</p>
+<p>Voorbeeld: Een &lt;img /&gt; zonder alt die verborgen is.</p>
+<p>== Onnauwkeurigheid in regels ==</p>
+<p>Een bekende uitzondering die niet in de tool is ingebouwd, vaak omdat dit niet te automatiserne is.</p>
+<p>Voorbeeld: Alternatieve kleuren op een website.</p>
+<p>== Verschil in interpretatie ==</p>
+<p>Voorbeeld: Een pagina zonder &lt;h1&gt;</p>
+<p>= Consquenties =</p>
+<p>Verschillen worden ineens pijnlijk zichtbaar</p>
+<p>De vijf fases van WCAG vergelijken:</p>
+<ul>
+<li><p>Ontkenning: </p>
+</li>
+<li><p>Verwarring, wat is fout en wat niet?</p>
+</li>
+<li><p>Boosheid: Jullie weten niet wat je doet?</p>
+</li>
+<li><p>Acceptatie: ... Hopelijk?</p>
+</li>
+</ul>
+<p>= Standaarden =</p>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>
