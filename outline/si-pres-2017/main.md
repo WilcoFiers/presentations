@@ -68,4 +68,8 @@ De vijf fases van WCAG vergelijken:
 ----
 # Standaarden
 
-TODO
+- WCAG Techniques
+- Accessibility Conformance Testing
+- ACT Rules Format
+- Auto-WCAG Rules
+- ACT Test case repository
