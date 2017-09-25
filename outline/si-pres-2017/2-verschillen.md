@@ -46,6 +46,11 @@ Wanneer experts het niet met elkaar eens zijn.
 
 Voorbeeld: Een pagina zonder `<h1>`
 
+## Expert tests
+
+Niet alleen tools hebben dit probleem.
+Ook experts zijn het slechts 75% van de tijd eens.
+
 ## Consquenties
 
 Verschillen worden ineens pijnlijk zichtbaar

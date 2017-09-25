@@ -1,4 +1,6 @@
-# Hoe tools digitale toegankelijkheid veranderen 
+Hoe tools 
+# digitale toegankelijkheid
+veranderen 
 
 ---- {{ "class": "deque-intro" }}
 
@@ -6,6 +8,7 @@
 
 Wilco Fiers
 Deque Systems
+aXe Product manager
 
 ![Wilco](img/wilco.jpg)
 
@@ -18,7 +21,7 @@ Expertgroep DigiToegankelijk
 
 ![](img/many-hats.jpg)
 
-----
+## Hoe tools digitale toegankelijkheid veranderen 
 
 - Nieuwe generatie tools
 - Standaardisatie
