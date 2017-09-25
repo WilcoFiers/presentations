@@ -27,105 +27,249 @@
 	<div class="reveal"><div class="slides">
 		<section>
 <section>
-<p>Hoe tools en standaarden </p>
-<p>digitoegankelijkheid veranderen</p>
+<h1 id="hoe-tools-digitale-toegankelijkheid-veranderen">Hoe tools digitale toegankelijkheid veranderen</h1>
 
 </section>
+<section class="deque-intro">
+<p><img src="img/deque-logo.png" alt="Deque"></p>
+<p>Wilco Fiers</p>
+<p>Deque Systems</p>
+<p><img src="img/wilco.jpg" alt="Wilco"></p>
+
+</section>
+<section>
+<h2 id="vele-hoedjes">Vele hoedjes</h2>
+<p>Auto-WCAG Chair</p>
+<p>Deque rep in EUs WADEX-group</p>
+<p>ACT Taskforce facilitator</p>
+<p>Expertgroep DigiToegankelijk</p>
+<p><img src="img/many-hats.jpg" alt=""></p>
+
+</section>
+<section>
+<ul>
+<li><p>Nieuwe generatie tools</p>
+</li>
+<li><p>Standaardisatie</p>
+</li>
+<li><p>Wat tools kunnen, vandaag en morgen</p>
+</li>
+<li><p>Vragen</p>
+</li>
+</ul>
+
+</section>
+</section>
+<section>
 <section>
 <h1 id="tools">Tools</h1>
 <p>Er is een explosie geweest van tools in digitoegankelijkheid</p>
 
 </section>
 <section>
-<h2 id="cambrian-wcag-explosie">Cambrian WCAG Explosie</h2>
-<p>Todo</p>
+<h2 id="wcag-tools-explosie">WCAG Tools Explosie</h2>
+<p><a href="https://www.w3.org/WAI/ER/tools/">https://www.w3.org/WAI/ER/tools/</a></p>
 
 </section>
 <section>
 <h2 id="de-grote-integratie-race">De grote integratie race</h2>
-<p>Tool ontwikkelaars zijn druk in competitie met elkaar om hun test tool op zo veel mogelijk plaatsen in gebruik te krijgen.</p>
 <ul>
-<li><p>Test frameworks (Jasmin, Jest, Nightwatch, etc.)</p>
-</li>
-<li><p>Command line tools</p>
-</li>
 <li><p>Browser plugins</p>
 </li>
 <li><p>Bookmarklets</p>
 </li>
-<li><p>Stand-alone accessibility platforms</p>
+<li><p>SAAS</p>
+</li>
+<li><p>Test frameworks</p>
+</li>
+<li><p>Command line tools</p>
+</li>
+<li><p>Online platforms</p>
 </li>
 <li><p>WYSIWIG editors</p>
 </li>
-<li><p>Acceptatietests</p>
+<li><p>Desktop apps</p>
+</li>
+<li><p>...</p>
 </li>
 </ul>
 
 </section>
+</section>
+<section>
 <section>
 <h1 id="de-grote-verschillen">De grote verschillen</h1>
 <p>Tools geven zelden hetzelfde antwoord</p>
-<p>Dit heeft drie oorzaken</p>
+
+</section>
+<section>
+<h2 id="digitoegankelijk-nl">DigiToegankelijk.nl</h2>
+<p><img src="img/a11y-tools.png" alt="A11y tools compared"></p>
+
+</section>
+<section>
+<h3 id="siteimprove">SiteImprove</h3>
+<p><img src="img/a11y-tools-1.png" alt="A11y tools compared"></p>
+
+</section>
+<section>
+<h3 id="html-codesniffer">HTML CodeSniffer</h3>
+<p><img src="img/a11y-tools-2.png" alt="A11y tools compared"></p>
+
+</section>
+<section>
+<h3 id="user-test-tool">User Test Tool</h3>
+<p><img src="img/a11y-tools-3.png" alt="UTT 1 heading fout"></p>
+
+</section>
+<section>
+<h3 id="axe-devtools">aXe Devtools</h3>
+<p><img src="img/a11y-tools-4.png" alt="aXe Devtools, geen fouten"></p>
+
+</section>
+<section>
+<h2 id="waarom-de-verschillen">Waarom de verschillen</h2>
 <ul>
-<li><p>Verschil in interpretatie</p>
+<li class="fragment"><p>False positives</p>
 </li>
-<li><p>Onnauwkeurige regels</p>
+<li class="fragment"><p>Bewuste afwijkingen</p>
 </li>
-<li><p>False positives</p>
+<li class="fragment"><p>Verschil in interpretatie</p>
 </li>
 </ul>
 
 </section>
 <section>
-<h2 id="false-positives">False positives</h2>
+<h3 id="false-positives">False positives</h3>
 <p>Een onvoorziene situatie die leidt tot fout keuren van iets dat niet fout is.</p>
 <p>Voorbeeld: Een <code>&lt;img /&gt;</code> zonder alt die verborgen is.</p>
 
 </section>
 <section>
-<h2 id="onnauwkeurigheid-in-regels">Onnauwkeurigheid in regels</h2>
+<h3 id="bewuste-afwijkingen">Bewuste afwijkingen</h3>
 <p>Een bekende uitzondering die niet in de tool is ingebouwd, vaak omdat dit niet te automatiserne is.</p>
 <p>Voorbeeld: Alternatieve kleuren op een website.</p>
 
 </section>
 <section>
-<h2 id="verschil-in-interpretatie">Verschil in interpretatie</h2>
+<h3 id="verschil-in-interpretatie">Verschil in interpretatie</h3>
+<p>Wanneer experts het niet met elkaar eens zijn.</p>
 <p>Voorbeeld: Een pagina zonder <code>&lt;h1&gt;</code></p>
 
 </section>
 <section>
-<h1 id="consquenties">Consquenties</h1>
+<h2 id="consquenties">Consquenties</h2>
 <p>Verschillen worden ineens pijnlijk zichtbaar</p>
-<p>De vijf fases van WCAG vergelijken:</p>
 
 </section>
 <section>
+<p>De vijf fases van WCAG vergelijken:</p>
 <ul>
-<li><p>Ontkenning: </p>
+<li class="fragment"><p><strong>Ontkenning</strong>: Ligt het aan mij? Doe ik het goed?</p>
 </li>
-<li><p>Verwarring, wat is fout en wat niet?</p>
+<li class="fragment"><p><strong>Verwarring</strong>: Is dit echt ontoegankelijk?</p>
 </li>
-<li><p>Boosheid: Jullie weten niet wat je doet?</p>
+<li class="fragment"><p><strong>Boosheid</strong>: Jullie weten niet wat je doet!</p>
 </li>
-<li><p>Acceptatie: ... Hopelijk?</p>
+<li class="fragment"><p><strong>Depressie</strong>: Ik kan het nooit goed doen.</p>
+</li>
+<li class="fragment"><p><strong>Acceptatie</strong>: ... Hopelijk?</p>
 </li>
 </ul>
 
 </section>
+</section>
+<section>
 <section>
 <h1 id="standaarden">Standaarden</h1>
+
+</section>
+<section>
+<h2 id="doelen">Doelen</h2>
 <ul>
-<li><p>WCAG Techniques</p>
+<li><p>Testverschillen verkleinen</p>
 </li>
-<li><p>Accessibility Conformance Testing</p>
+<li><p>Duidelijkheid scheppen</p>
 </li>
-<li><p>ACT Rules Format</p>
-</li>
-<li><p>Auto-WCAG Rules</p>
-</li>
-<li><p>ACT Test case repository</p>
+<li><p>Van elkaar leren</p>
 </li>
 </ul>
+
+</section>
+<section>
+<h2 id="auto-wcag">Auto-WCAG</h2>
+<ul>
+<li><p>W3C Community Group</p>
+<p>(open voor iedereen)</p>
+</li>
+<li><p>Bezig sinds 2014</p>
+</li>
+<li><p>20 gepubliceerde regels</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="accessibility-conformance-testing">Accessibility Conformance Testing</h2>
+<ul>
+<li><p>W3C Taskforce</p>
+</li>
+<li><p>Werkt aan standaard test regels</p>
+</li>
+<li><p>Werkt aan test case repository</p>
+</li>
+</ul>
+<p><a href="https://w3c.github.io/wcag-act-rules/">https://w3c.github.io/wcag-act-rules/</a></p>
+
+</section>
+</section>
+<section>
+<section>
+<h2 id="wat-tools-kunnen">Wat tools kunnen</h2>
+<ul>
+<li class="fragment"><p>Tekstalternatieven en accessible names</p>
+</li>
+<li class="fragment"><p>Correct ARIA gebruik</p>
+</li>
+<li class="fragment"><p>Correcte structuur (tables, lists, title)</p>
+</li>
+<li class="fragment"><p>Zoom, auto-refresh</p>
+</li>
+<li class="fragment"><p>Kleurcontrast</p>
+</li>
+<li class="fragment"><p>... en meer</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="doelen-voor-de-toekomst">Doelen voor de toekomst</h2>
+<ul>
+<li class="fragment"><p>Dynamische content testen</p>
+</li>
+<li class="fragment"><p>Teksten en afbeeldingen herkennen</p>
+</li>
+<li class="fragment"><p>Integreren met expert tests</p>
+</li>
+<li class="fragment"><p>Integreren met CI</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="test-ook-zelf-">Test ook zelf!</h2>
+<p>25 - 50% van alle problemen</p>
+<p>0 criteria volledig automatisch</p>
+<p><a href="https://www.w3.org/WAI/eval/preliminary">https://www.w3.org/WAI/eval/preliminary</a></p>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="vragen-">Vragen?</h1>
+<p><a href="https://twitter.com/wilcofiers">@wilcofiers</a></p>
+<p><a href="https://axe-core.org">axe-core.org</a></p>
+<p><a href="https://dequeuniversity.com/">dequeuniversity.com</a></p>
 
 </section>
 
