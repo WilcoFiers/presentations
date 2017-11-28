@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<h1 id="accessibility-conformance-testing">Accessibility Conformance Testing</h1>
+
+</section>
+<section>
+<h2 id="act-taskforce">ACT Taskforce</h2>
+<ul>
+<li><p>Part of Accessibility Guidelines WG</p>
+</li>
+<li><p>Incubated in Auto-WCAG CG</p>
+</li>
+<li><p>Started in 2016</p>
+</li>
+<li><p>Set up to write ACT Rules Format</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="why-we-need-tests">Why we need tests</h2>
+<p>Accessibility test results today:</p>
+<ul>
+<li><p>Inconsistent</p>
+</li>
+<li><p>Confusing</p>
+</li>
+<li><p>Costly</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="act-rules-are">ACT Rules are</h2>
+<ul>
+<li><p>generic,</p>
+</li>
+<li><p>reliable,</p>
+</li>
+<li><p>technology specific,</p>
+</li>
+<li><p>implementation agnostic,</p>
+</li>
+<li><p>accessibility test procedures.</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="act-rules-are-generic">ACT Rules are generic</h3>
+<p>Not tied to a particular website</p>
+
+</section>
+<section>
+<h3 id="act-rules-are-technology-specific">ACT Rules are technology specific</h3>
+<p>Rules target a specific technology,</p>
+<p>such as HTML, EPUB, PDF, etc.</p>
+
+</section>
+<section>
+<h3 id="act-rules-are-implementation-agnostic">ACT Rules are implementation agnostic</h3>
+<p>Implementable in many accessibility tools</p>
+<p>Usable in manual test procedures</p>
+
+</section>
+<section>
+<h3 id="act-rules-are-a11y-test-procedures">ACT Rules are A11y test procedures</h3>
+<ul>
+<li><p>Test for WCAG 2.x criteria</p>
+</li>
+<li><p>Test other &quot;Accessibility requirements&quot;:</p>
+<ul>
+<li><p>National standards</p>
+</li>
+<li><p>Company policies</p>
+</li>
+<li><p>Best practices</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="act-rules-are">ACT Rules are</h3>
+<ul>
+<li><p>ACT Rules are for testers,</p>
+</li>
+<li><p>what WCAG Techniques are for developers.</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h1 id="act-the-plan">ACT: The plan</h1>
+<ul>
+<li><p>Define a shared format</p>
+</li>
+<li><p>Bring together test cases</p>
+</li>
+<li><p>Publish shared test rules</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="act-rules-format-1-2-">ACT Rules Format (1/2)</h2>
+<p><a href="https://www.w3.org/TR/act-rules-format/">https://www.w3.org/TR/act-rules-format/</a></p>
+<ul>
+<li><p>Description</p>
+</li>
+<li><p>Accessibility Requirements</p>
+</li>
+<li><p>Assumptions</p>
+</li>
+<li><p>Accessibility Support</p>
+</li>
+<li><p>...</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="act-rules-format-2-2-">ACT Rules Format (2/2)</h2>
+<ul>
+<li><p>Test subject type</p>
+</li>
+<li><p>Test procedure</p>
+<ul>
+<li><p>Selector</p>
+</li>
+<li><p>Test step 1</p>
+</li>
+<li><p>Test step ...</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="test-case-repository">Test case repository</h2>
+<ul>
+<li><p>Written in JSON</p>
+</li>
+<li><p>Points pages with examples</p>
+</li>
+<li><p>Selectors with passes and violations</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h3 id="test-cases-example-">Test cases example:</h3>
+<pre><code>
+{
+
+  &quot;name&quot;: &quot;axe-core&quot;,
+
+  &quot;version&quot;: &quot;2.2.1&quot;,
+
+  &quot;license&quot;: &quot;MPL-2.0&quot;,
+
+  &quot;contributors&quot;: [{
+&quot;url&quot;: &quot;https://rawgit.com/dequelabs/axe-core/
+master/test/integration/rules/button-name.html&quot;,
+&quot;successCriteria&quot;: [&quot;wcag20:ensure-compat-rsv&quot;],
+&quot;failed&quot;: [&quot;#empty&quot;, &quot;#val&quot;, &quot;#alempty&quot;,
+  &quot;#albmissing&quot;, &quot;#albempty&quot;],
+&quot;passed&quot;: [&quot;#text&quot;, &quot;#al&quot;, &quot;#alb&quot;, &quot;#combo&quot;]
+
+  }]
+
+}
+</code></pre>
+</section>
+<section>
+<h2 id="publish-rules">Publish rules</h2>
+<p><a href="https://w3c.github.io/wcag-act-rules/">https://w3c.github.io/wcag-act-rules/</a></p>
+
+</section>
+<section>
+<h1 id="act-timeline">ACT Timeline</h1>
+
+</section>
+<section>
+<p>Q1 2018:</p>
+<ul>
+<li><p>3rd draft ACT Rules format</p>
+</li>
+<li><p>First draft ACT Rules Review process</p>
+</li>
+</ul>
+<p>Q3 2018:</p>
+<ul>
+<li><p>First look: ACT Rules repository</p>
+</li>
+<li><p>Complete ACT Test Case repository</p>
+</li>
+</ul>
+<p>Q1 2019:</p>
+<ul>
+<li><p>Recommendation ACT Rules Format</p>
+</li>
+<li><p>Complete ACT Rules Repository</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h1 id="questions-">Questions?</h1>
+
+</section>
+</section>
+<section>
+<section>
+
+</section>
+</section>
+<section>
+<section>
+<h1 id="act-on-axe">ACT on aXe</h1>
+
+</section>
+<section>
+<h2 id="manifesto">Manifesto</h2>
+<ol>
+<li><p>Rules must have a zero false-positive rate</p>
+</li>
+<li><p>Rules must be lightweight and fast</p>
+</li>
+<li><p>Rules must work in all modern browsers</p>
+</li>
+<li><p>Rules must, themselves, be tested automatically</p>
+</li>
+</ol>
+
+</section>
+<section>
+<h2 id="axe-core-structure">Axe-core structure</h2>
+<p>Rules</p>
+<ul>
+<li><p>Selector (CSS)</p>
+</li>
+<li><p>Matcher (JS)</p>
+</li>
+<li><p>Any (List of checks)</p>
+</li>
+<li><p>All (List of checks)</p>
+</li>
+<li><p>None (List of checks)</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="checks">Checks</h2>
+<ul>
+<li><p>Impact</p>
+</li>
+<li><p>evaluate (js)</p>
+</li>
+<li><p>after (js)</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="tags">Tags</h2>
+<ul>
+<li><p>wcag2a, wcag2aa</p>
+</li>
+<li><p>wcag111, wcag214</p>
+</li>
+<li><p>best-practice, experimental</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="results">Results</h2>
+<ul>
+<li><p>violations</p>
+</li>
+<li><p>needs review</p>
+</li>
+<li><p>passes</p>
+</li>
+<li><p>inapplicable</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="tests">Tests</h2>
+<ul>
+<li><p>Core (js)</p>
+</li>
+<li><p>Commons (js)</p>
+</li>
+<li><p>Checks (js)</p>
+</li>
+<li><p>Integrations</p>
+<ul>
+<li><p>rules (html)</p>
+</li>
+<li><p>full (html)</p>
+</li>
+</ul>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="act-usage">ACT Usage</h2>
+<ul>
+<li><p>Accessibility requirement -&gt; tags</p>
+</li>
+<li><p>test mode -&gt; &quot;(semi-)automatic&quot;</p>
+</li>
+<li><p>test type -&gt; &quot;Rendered page&quot;</p>
+</li>
+<li><p>Selector -&gt; selector + matcher</p>
+</li>
+<li><p>steps -&gt; checks</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="axe-rules-format">aXe Rules Format</h2>
+<ul>
+<li><p>Used in rule proposal</p>
+</li>
+<li><p>Can be mapped to ACT (manually)</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="in-short">In short</h2>
+<ul>
+<li><p>New axe rules can be created for ACT</p>
+</li>
+<li><p>Existing aXe rules need more documentation</p>
+</li>
+<li><p>External ACT Rules can be built into aXe</p>
+</li>
+</ul>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<h1 id="deque-research">Deque Research</h1>
+<p>For software that makes the web accessible.</p>
+
+</section>
+<section>
+<h2 id="who-are-we">Who are we</h2>
+<ul>
+<li><p>Dylan Barrell, CTO</p>
+</li>
+<li><p>Wilco Fiers, Product manager</p>
+</li>
+<li><p>???, sofware developer</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="what-deque-does-1-2-">What Deque does (1/2)</h2>
+<p>Products:</p>
+<ul>
+<li><p>aXe</p>
+</li>
+<li><p>Attest &amp; Attest Mobile</p>
+</li>
+<li><p>Comply</p>
+</li>
+<li><p>Assure</p>
+</li>
+<li><p>...</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="what-deque-does-2-2-">What Deque does (2/2)</h2>
+<p>Services:</p>
+<ul>
+<li><p>Training (Deque University)</p>
+</li>
+<li><p>Auditing</p>
+</li>
+<li><p>Consultancy</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h1 id="wai-tools">WAI-Tools</h1>
+
+</section>
+<section>
+<h2 id="wps-deque-leads">WPs Deque leads</h2>
+<ul>
+<li><p>WP1.1: Design semi-automated rules</p>
+</li>
+<li><p>WP1.2: Implement automated and semi-autmoated rules</p>
+</li>
+<li><p>WP2.1: Implement open format</p>
+</li>
+<li><p>WP3.2: Update WCAG-EM report tool to import the open format</p>
+</li>
+<li><p>WP4.3: Develop exploitation plans</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="wp1-1-semi-automated-rule-design">WP1.1: Semi-automated rule design</h2>
+<p>New test rules:</p>
+<ul>
+<li><p>M12: 10 ACT Rules</p>
+</li>
+<li><p>M24: +10 ACT Rules</p>
+</li>
+<li><p>M36: +5 ACT Rules</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="wp1-2-implementation">WP1.2: Implementation</h2>
+<p>Implementation into axe-core</p>
+<ul>
+<li><p>M12: 25 ACT Rules</p>
+</li>
+<li><p>M24: +20 ACT Rules</p>
+</li>
+<li><p>M36: +10 ACT Rules</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="wp2-1-implement-open-format">WP2.1 Implement Open Format</h2>
+<ul>
+<li><p>M08: Format Due on M08 (lead W3C)</p>
+</li>
+<li><p>M12: Implementation into axe</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="wp3-2-wcag-em-report-tool-import">WP3.2: WCAG-EM Report Tool Import</h2>
+<ul>
+<li>Add Open Format import</li>
+</ul>
+<p><a href="https://www.w3.org/WAI/eval/report-tool/#/">w3.org/WAI/eval/report-tool/</a></p>
+
+</section>
+<section>
+<h2 id="wp4-3-exploitation-plans">WP4.3: Exploitation plans</h2>
+<ul>
+<li><p>M03: Initial exploitation plan</p>
+</li>
+<li><p>M36: Final exploitation plan</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="questions-">Questions?</h2>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>

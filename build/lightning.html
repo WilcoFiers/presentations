@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Automated Accessibility Testing</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+
+	<div class="reveal"><div class="slides">
+		<section>
+<section>
+<p><img src="img/wilco.jpg" alt="Wilco"></p>
+<p>Wilco Fiers</p>
+<p>@wilcofiers</p>
+<p>Deque Research (NL)</p>
+<p>ACT Taskforce (W3C)</p>
+
+</section>
+<section>
+<h2 id="axe">aXe</h2>
+<p>Product manager</p>
+
+</section>
+<section>
+<h2 id="accessibility-testing">Accessibility testing</h2>
+<ul>
+<li><p>Manual testing</p>
+</li>
+<li><p>Takes a week</p>
+</li>
+<li><p>Done anually</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="tools">Tools</h2>
+<p>Accuracy is key</p>
+
+</section>
+<section>
+<h2 id="2015-deque-released-axe">2015: Deque released aXe</h2>
+<p>And I just had to work on it</p>
+
+</section>
+<section>
+<h2 id="why-axe-matters">Why aXe matters</h2>
+<ul>
+<li><p>0 False positives</p>
+</li>
+<li><p>Fast enough for CI</p>
+</li>
+<li><p>No network required</p>
+</li>
+</ul>
+
+</section>
+<section>
+<h2 id="getting-started">Getting started</h2>
+<p>axe-core.org</p>
+
+</section>
+<section>
+<h2 id="in-closing">In closing</h2>
+<ul>
+<li><p>Build automated tests</p>
+</li>
+<li><p>Use tools for accessibility</p>
+</li>
+<li><p>Help us test Coconut, please</p>
+</li>
+</ul>
+<p>We are hiring :)</p>
+<p>@wilcofiers</p>
+
+</section>
+
+</section>
+	</div></div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+</html>
